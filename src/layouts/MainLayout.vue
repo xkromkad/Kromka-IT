@@ -1,19 +1,27 @@
 <template>
   <q-layout view="lHr Lpr lFF">
     <q-header elevated class="k-background">
-      <q-toolbar class="text-dark">
-        <q-toolbar-title> Quasar App </q-toolbar-title>
+      <q-toolbar class="text-light">
+        <q-toolbar-title>
+          <q-img
+            clickable
+            class="q-mt-sm cursor-pointer q-hoverable"
+            src="src/assets/icons/kromka.png"
+            spinner-color="white"
+            style="max-width: 4rem; border-radius: 10%"
+          />
+        </q-toolbar-title>
         <q-space />
-        <q-btn-toggle
-          v-if="$q.screen.gt.xs"
-          v-model="model"
-          no-caps
-          flat
-          stretch
+        <q-tabs
           class="header-item"
-          toggle-color="inherit"
-          :options="options"
-        />
+          no-caps
+          v-model="model"
+          v-if="$q.screen.gt.xs"
+        >
+          <q-tab class="q-mx-sm" name="kromka" label="Kromka IT" />
+          <q-tab class="q-mx-sm" name="projects" label="Portfólio" />
+          <q-tab class="q-mx-sm" name="about" label="O mne" />
+        </q-tabs>
         <q-btn
           v-if="$q.screen.lt.sm"
           flat
@@ -101,12 +109,12 @@ export default defineComponent({
   },
 
   setup() {
-    var model = ref('one');
+    var model = ref('kromka');
 
     const options = [
-      { label: 'kromka', value: 'kromka' },
-      { label: 'projekty', value: 'projects' },
-      { label: 'o mne', value: 'about' },
+      { label: 'Kromka IT', value: 'kromka' },
+      { label: 'Portfólio', value: 'projects' },
+      { label: 'O mne', value: 'about' },
     ];
 
     const leftDrawerOpen = ref(false);
@@ -126,11 +134,22 @@ export default defineComponent({
 
 <style>
 .q-header {
-  height: 10rem;
+  height: 0rem;
 }
 
-.header-item > .q-btn {
+.title {
+  margin-top: 5rem;
+  font-size: calc(15vw - 1rem);
+  letter-spacing: 1rem;
+  font-weight: 1000;
+}
+
+.header-item {
   font-size: 15px;
   letter-spacing: 0.2rem;
+}
+
+.q-tab--active {
+  color: #ffb510;
 }
 </style>
