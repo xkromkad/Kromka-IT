@@ -4,7 +4,6 @@
       <q-toolbar class="text-light">
         <q-toolbar-title>
           <q-img
-            clickable
             class="q-mt-sm cursor-pointer q-hoverable"
             src="src/assets/icons/kromka.png"
             spinner-color="white"
@@ -20,7 +19,9 @@
         >
           <q-tab class="q-mx-sm" name="kromka" label="Kromka IT" />
           <q-tab class="q-mx-sm" name="projects" label="Portfólio" />
-          <q-tab class="q-mx-sm" name="about" label="O mne" />
+          <q-tab class="q-mx-sm" name="experience" label="Skúsenosti" />
+          <q-tab class="q-mx-sm" name="contact" label="Kontakt" />
+          <q-tab class="q-mx-sm" name="blog" label="Blog" />
         </q-tabs>
         <q-btn
           v-if="$q.screen.lt.sm"
