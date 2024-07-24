@@ -13,21 +13,41 @@
       </div>
     </div>
   </div>
-
+  <!--
   <footer>
     <div class="row">
       <a class="q-mx-md" href="https://github.com/xkromkad" target="_blank">
-          <img src="src/assets/icons/github.svg" style="width: 3.5vw; max-width: 2.8rem; min-width: 1.9rem;" alt="Github" />
+        <img
+          src="src/assets/icons/github.svg"
+          style="width: 3.5vw; max-width: 2.8rem; min-width: 1.9rem"
+          alt="Github"
+        />
       </a>
-      <a class="q-mx-md" href="https://www.linkedin.com/in/d%C3%A1vid-kromka-497978217" target="_blank">
-          <img src="src/assets/icons/linkedin.svg" style="width: 3.5vw; max-width: 2.8rem; min-width: 1.9rem;" alt="Instagram" />
+      <a
+        class="q-mx-md"
+        href="https://www.linkedin.com/in/d%C3%A1vid-kromka-497978217"
+        target="_blank"
+      >
+        <img
+          src="src/assets/icons/linkedin.svg"
+          style="width: 3.5vw; max-width: 2.8rem; min-width: 1.9rem"
+          alt="Instagram"
+        />
       </a>
-      <a class="q-mx-md" href="https://www.instagram.com/davidkromka/" target="_blank">
-          <img src="src/assets/icons/instagram.svg" style="width: 3.5vw; max-width: 2.8rem; min-width: 1.9rem;" alt="Instagram" />
+      <a
+        class="q-mx-md"
+        href="https://www.instagram.com/davidkromka/"
+        target="_blank"
+      >
+        <img
+          src="src/assets/icons/instagram.svg"
+          style="width: 3.5vw; max-width: 2.8rem; min-width: 1.9rem"
+          alt="Instagram"
+        />
       </a>
     </div>
   </footer>
-
+  -->
 </template>
 
 <script lang="ts">
@@ -82,11 +102,6 @@ export default defineComponent({
   padding: 0;
 }
 
-body,
-html {
-  overflow: hidden;
-}
-
 .container {
   width: 100%;
   height: 100vh;
@@ -95,6 +110,9 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  animation: shrinkContainer 2s forwards;
+  animation-delay: 4s; /* Adjust the delay to start after all existing animations */
 
   .box {
     min-width: 250px;
@@ -300,7 +318,43 @@ html {
   }
 }
 
+@keyframes top {
+  0% {
+    opacity: 0;
+    bottom: 0px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 50%;
+  }
+}
+
+@keyframes icon {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3) rotate(-02deg);
+  }
+  100% {
+    opacity: 1;
+    bottom: 0px;
+  }
+}
+
+@keyframes shrinkContainer {
+  0% {
+    height: 100vh;
+  }
+  100% {
+    height: 50vh;
+  }
+}
+
 footer {
+  opacity: 0;
   max-width: 28rem;
   min-width: 15rem;
   width: 10vw;
@@ -314,7 +368,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: top 0.8s forwards;
+  animation: top 2s forwards;
   animation-delay: 4s;
   span {
     display: flex;
@@ -332,32 +386,6 @@ footer {
       animation-delay: 4s;
       opacity: 0;
     }
-  }
-}
-
-@keyframes top {
-  0% {
-    opacity: 0;
-    bottom: -80px;
-  }
-  100% {
-    opacity: 1;
-    bottom: 0px;
-  }
-}
-
-@keyframes icon {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.3) rotate(-02deg);
-  }
-  100% {
-    opacity: 1;
-    bottom: 0px;
   }
 }
 </style>
