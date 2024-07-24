@@ -14,17 +14,20 @@
     </div>
   </div>
 
-  <a href="https://youtu.be/7d2XsPSjjjI" target="_blank"
-    ><footer>
-      <img src="src/assets/icons/github.svg" alt="My Image" />
-      <div class="texto">
-        <span>
-          <i class="fab fa-youtube"></i>
-          watch on youtube</span
-        >
-      </div>
-    </footer>
-  </a>
+  <footer>
+    <div class="row">
+      <a class="q-mx-md" href="https://github.com/xkromkad" target="_blank">
+          <img src="src/assets/icons/github.svg" style="width: 3.5vw; max-width: 2.8rem; min-width: 1.9rem;" alt="Github" />
+      </a>
+      <a class="q-mx-md" href="https://www.linkedin.com/in/d%C3%A1vid-kromka-497978217" target="_blank">
+          <img src="src/assets/icons/linkedin.svg" style="width: 3.5vw; max-width: 2.8rem; min-width: 1.9rem;" alt="Instagram" />
+      </a>
+      <a class="q-mx-md" href="https://www.instagram.com/davidkromka/" target="_blank">
+          <img src="src/assets/icons/instagram.svg" style="width: 3.5vw; max-width: 2.8rem; min-width: 1.9rem;" alt="Instagram" />
+      </a>
+    </div>
+  </footer>
+
 </template>
 
 <script lang="ts">
@@ -298,8 +301,12 @@ html {
 }
 
 footer {
-  width: 350px;
-  height: 80px;
+  max-width: 28rem;
+  min-width: 15rem;
+  width: 10vw;
+  min-height: 3.5rem;
+  max-height: 5rem;
+  height: 5vw;
   background: #ffb510;
   position: absolute;
   right: 0;
