@@ -1,5 +1,5 @@
 #docker build -t kromka-image .
-#docker run -d -p 9000:9000 kromka-container
+#docker run -d --name kromka-container -p 9000:9000 kromka-image 
 # ----- BUILD STAGE -----
 FROM node:20-alpine AS build-stage
 
