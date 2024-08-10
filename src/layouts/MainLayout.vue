@@ -17,11 +17,7 @@
           v-model="model"
           v-if="$q.screen.gt.xs"
         >
-          <q-tab class="q-mx-sm" name="kromka" label="Kromka IT" />
-          <q-tab class="q-mx-sm" name="projects" label="Portfólio" />
-          <q-tab class="q-mx-sm" name="experience" label="Skúsenosti" />
-          <q-tab class="q-mx-sm" name="contact" label="Kontakt" />
-          <q-tab class="q-mx-sm" name="blog" label="Blog" />
+          <q-tab v-for="link in essentialLinks" :key="link.name" class="q-mx-sm" :name="link.name" :label="link.title" />
         </q-tabs>
         <q-btn
           v-if="$q.screen.lt.sm"
@@ -35,9 +31,9 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer side="right" v-model="leftDrawerOpen" bordered>
+    <q-drawer dark side="right" v-model="leftDrawerOpen" bordered>
       <q-list>
-        <q-item-label header> Essential Links </q-item-label>
+        <q-item-label header style="color: #ffb510;">Menu &lt;/&gt;</q-item-label>
 
         <EssentialLink
           v-for="link in essentialLinks"
@@ -59,46 +55,39 @@ import EssentialLink from 'components/EssentialLink.vue';
 
 const linksList = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev',
+    name: 'kromka',
+    title: 'Kromka IT',
+    caption: '',
+    icon: '',
+    link: '#',
   },
   {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework',
+    name: 'projects',
+    title: 'Portfólio',
+    caption: '',
+    icon: '',
+    link: '#projects',
   },
   {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev',
+    name: 'experience',
+    title: 'Skúsenosti',
+    caption: '',
+    icon: '',
+    link: '#experience',
   },
   {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev',
+    name: 'contact',
+    title: 'Kontakt',
+    caption: '',
+    icon: '',
+    link: '#contact',
   },
   {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev',
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev',
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev',
+    name: 'blog',
+    title: 'Blog',
+    caption: '',
+    icon: '',
+    link: '#blog',
   },
 ];
 
@@ -112,17 +101,10 @@ export default defineComponent({
   setup() {
     var model = ref('kromka');
 
-    const options = [
-      { label: 'Kromka IT', value: 'kromka' },
-      { label: 'Portfólio', value: 'projects' },
-      { label: 'O mne', value: 'about' },
-    ];
-
     const leftDrawerOpen = ref(false);
 
     return {
       model,
-      options,
       essentialLinks: linksList,
       leftDrawerOpen,
       toggleLeftDrawer() {
