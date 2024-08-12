@@ -1,0 +1,6 @@
+.video-background video {
+  width: 4rem; /* Adjust this based on your design */
+  height: auto;
+  object-fit: cover; /* Ensures the video covers the entire area */
+  z-index: -1; /* Keeps the video in the background */
+}
