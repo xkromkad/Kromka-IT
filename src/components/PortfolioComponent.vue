@@ -1,5 +1,5 @@
 <template>
-  <h2 class="full-width">Portfólio</h2>
+  <h2 class="full-width q-mt-xl">Portfólio</h2>
 </template>
 
 <script lang="ts">

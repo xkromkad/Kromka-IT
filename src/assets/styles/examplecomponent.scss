@@ -222,11 +222,11 @@
 @keyframes top {
   0% {
     opacity: 0;
-    bottom: 0px;
+    top: 0vh;
   }
   100% {
     opacity: 1;
-    bottom: 50%;
+    top: 42vh;
   }
 }
 

@@ -6,3 +6,20 @@ p {
 .quotation-bold {
   font-weight: bold;
 }
+
+.bold {
+  font-weight: bold;
+}
+
+.video-background-hello video {
+  width: 4rem; /* Adjust this based on your design */
+  height: auto;
+  object-fit: cover; /* Ensures the video covers the entire area */
+  z-index: -1; /* Keeps the video in the background */
+  margin-bottom: -1rem;
+}
+
+.quote-box {
+  border-radius: 30px;
+  font-style: italic;
+}

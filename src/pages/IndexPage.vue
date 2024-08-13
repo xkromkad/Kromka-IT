@@ -6,10 +6,12 @@
       :todos="todos"
       :meta="meta"
     ></example-component>
-    <kromka-component />
-    <portfolio-component />
-    <experience-component />
-    <contact-component />
+    <div class="row justify-center" style="max-width: 1800px; width: 100%">
+      <kromka-component />
+      <portfolio-component />
+      <experience-component />
+      <contact-component />
+    </div>
   </q-page>
 </template>
 

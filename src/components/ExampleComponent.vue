@@ -13,7 +13,7 @@
       </div>
     </div>
   </div>
-  <!--
+
   <footer>
     <div class="row">
       <a class="q-mx-md" href="https://github.com/xkromkad" target="_blank">
@@ -47,7 +47,6 @@
       </a>
     </div>
   </footer>
-  -->
 </template>
 
 <script lang="ts">

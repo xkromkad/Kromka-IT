@@ -1,5 +1,5 @@
 <template>
-  <div class="row items-center q-gutter-sm">
+  <div class="row items-center q-gutter-sm q-mt-xl">
     <h2 class="col-shrink">Kontakt</h2>
     <div class="video-background col">
       <video ref="videoElement" :src="webmSource" muted playsinline></video>

@@ -1,5 +1,5 @@
 <template>
-  <h2 class="full-width">Skúsenosti</h2>
+  <h2 class="full-width q-mt-xl">Skúsenosti</h2>
 </template>
 
 <script lang="ts">
