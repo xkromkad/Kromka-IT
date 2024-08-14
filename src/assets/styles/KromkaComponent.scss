@@ -23,3 +23,12 @@ p {
   border-radius: 30px;
   font-style: italic;
 }
+
+@media (max-width: 1025px) {
+  .img-container {
+    order: 2;
+  }
+  .text-container {
+    order: 1;
+  }
+}

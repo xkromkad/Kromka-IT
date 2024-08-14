@@ -8,8 +8,8 @@
     ></example-component>
     <div class="row justify-center" style="max-width: 1800px; width: 100%">
       <kromka-component />
-      <portfolio-component />
       <experience-component />
+      <portfolio-component />
       <contact-component />
     </div>
   </q-page>

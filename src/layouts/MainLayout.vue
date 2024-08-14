@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHr Lpr lFF">
-    <q-header elevated class="k-background">
-      <q-toolbar class="text-light">
+    <q-header elevated>
+      <q-toolbar class="text-light toolbar">
         <q-toolbar-title>
           <q-img
             class="q-mt-sm cursor-pointer q-hoverable"
@@ -15,12 +15,18 @@
           class="header-item"
           no-caps
           v-model="model"
-          v-if="$q.screen.gt.xs"
+          v-if="$q.screen.gt.sm"
         >
-          <q-tab v-for="link in essentialLinks" :key="link.name" class="q-mx-sm" :name="link.name" :label="link.title" />
+          <q-tab
+            v-for="link in essentialLinks"
+            :key="link.name"
+            class="q-mx-sm"
+            :name="link.name"
+            :label="link.title"
+          />
         </q-tabs>
         <q-btn
-          v-if="$q.screen.lt.sm"
+          v-if="$q.screen.lt.md"
           flat
           dense
           round
@@ -33,7 +39,9 @@
 
     <q-drawer dark side="right" v-model="leftDrawerOpen" bordered>
       <q-list>
-        <q-item-label header style="color: #ffb510;">Menu &lt;/&gt;</q-item-label>
+        <q-item-label header style="color: #ffb510"
+          >Menu &lt;/&gt;</q-item-label
+        >
 
         <EssentialLink
           v-for="link in essentialLinks"
@@ -62,18 +70,18 @@ const linksList = [
     link: '#',
   },
   {
-    name: 'projects',
-    title: 'Portfólio',
-    caption: '',
-    icon: '',
-    link: '#projects',
-  },
-  {
     name: 'experience',
     title: 'Skúsenosti',
     caption: '',
     icon: '',
     link: '#experience',
+  },
+  {
+    name: 'projects',
+    title: 'Portfólio',
+    caption: '',
+    icon: '',
+    link: '#projects',
   },
   {
     name: 'contact',
@@ -134,5 +142,9 @@ export default defineComponent({
 
 .q-tab--active {
   color: #ffb510;
+}
+
+.toolbar {
+  background: #232323;
 }
 </style>

@@ -5,6 +5,7 @@
       <video ref="videoElement" :src="webmSource" muted playsinline></video>
     </div>
   </div>
+  <div class="full-width"></div>
 </template>
 
 <script lang="ts">
