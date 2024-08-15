@@ -16,33 +16,40 @@
 
   <footer>
     <div class="row">
-      <a class="q-mx-md" href="https://github.com/xkromkad" target="_blank">
+      <a
+        class="q-mx-md"
+        href="https://github.com/xkromkad"
+        title="Github Dávid Kromka"
+        target="_blank"
+      >
         <img
           src="src/assets/icons/github.svg"
           style="width: 3.5vw; max-width: 2.8rem; min-width: 1.9rem"
-          alt="Github"
+          alt="Github Dávida Kromku"
         />
       </a>
       <a
         class="q-mx-md"
         href="https://www.linkedin.com/in/d%C3%A1vid-kromka-497978217"
+        title="Linkedin Dávid Kromka"
         target="_blank"
       >
         <img
           src="src/assets/icons/linkedin.svg"
           style="width: 3.5vw; max-width: 2.8rem; min-width: 1.9rem"
-          alt="Instagram"
+          alt="Linkedin Dávida Kromku"
         />
       </a>
       <a
         class="q-mx-md"
         href="https://www.instagram.com/davidkromka/"
+        title="Instagram Dávid Kromka"
         target="_blank"
       >
         <img
           src="src/assets/icons/instagram.svg"
           style="width: 3.5vw; max-width: 2.8rem; min-width: 1.9rem"
-          alt="Instagram"
+          alt="Instagram Dávida Kromku"
         />
       </a>
     </div>

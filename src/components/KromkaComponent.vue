@@ -1,7 +1,11 @@
 <template>
   <div class="row full-width q-mt-xl" style="max-width: 1200px">
     <div class="col-md-6 col-12 text-center img-container">
-      <q-img src="src/assets/images/david.png" width="25rem"></q-img>
+      <q-img
+        src="src/assets/images/david.png"
+        width="25rem"
+        alt="Dávid Kromka"
+      ></q-img>
     </div>
     <div class="col-md-6 col-12 text-container">
       <h3 class="q-mx-md">
@@ -31,7 +35,13 @@
           <div>Viac o mne</div>
           <q-icon class="q-ml-sm" size="1.5rem" name="o_expand_circle_down" />
         </q-btn>
-        <q-btn no-caps unelevated round class="k-background q-mt-md q-ml-sm" icon="o_mail">
+        <q-btn
+          no-caps
+          unelevated
+          round
+          class="k-background q-mt-md q-ml-sm"
+          icon="o_mail"
+        >
         </q-btn>
       </div>
     </div>
