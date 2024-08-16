@@ -14,7 +14,7 @@
     </div>
   </div>
 
-  <footer>
+  <div id="social-links">
     <div class="row">
       <a
         class="q-mx-md"
@@ -53,7 +53,7 @@
         />
       </a>
     </div>
-  </footer>
+  </div>
 </template>
 
 <script lang="ts">

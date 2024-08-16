@@ -1,6 +1,6 @@
 <template>
-  <q-layout view="lHr Lpr lFF">
-    <q-header elevated>
+  <q-layout view="lHr Lpr fff">
+    <q-header>
       <q-toolbar class="text-light toolbar">
         <q-toolbar-title>
           <q-img
@@ -54,6 +54,60 @@
     <q-page-container>
       <router-view />
     </q-page-container>
+
+    <q-footer id="footer">
+      <q-toolbar class="row footer-row q-pa-md">
+        <div class="col-12 col-sm-6">
+          <q-toolbar-title>Kromka<span class="dot">.</span>IT</q-toolbar-title>
+          <p class="author">Copyright © 2024 Dávid Kromka</p>
+          <p class="author">
+            <a href="mailto:david@kromka.it">david@kromka.it</a>
+          </p>
+        </div>
+        <div class="col-12 col-sm-6">
+          <div class="row justify-end">
+            <div class="footer-links k-background q-pa-sm">
+              <a
+                class="q-mx-md"
+                href="https://github.com/xkromkad"
+                title="Github Dávid Kromka"
+                target="_blank"
+              >
+                <img
+                  src="src/assets/icons/github.svg"
+                  style="width: 3.5vw; max-width: 2rem; min-width: 1.9rem"
+                  alt="Github Dávid Kromka"
+                />
+              </a>
+              <a
+                class="q-mx-md"
+                href="https://www.linkedin.com/in/d%C3%A1vid-kromka-497978217"
+                title="Linkedin Dávid Kromka"
+                target="_blank"
+              >
+                <img
+                  src="src/assets/icons/linkedin.svg"
+                  style="width: 3.5vw; max-width: 2rem; min-width: 1.9rem"
+                  alt="Linkedin Dávid Kromka"
+                />
+              </a>
+              <a
+                class="q-mx-md"
+                href="https://www.instagram.com/davidkromka/"
+                title="Instagram Dávid Kromka"
+                target="_blank"
+              >
+                <img
+                  src="src/assets/icons/instagram.svg"
+                  style="width: 3.5vw; max-width: 2rem; min-width: 1.9rem"
+                  alt="Instagram Dávid Kromka"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </q-toolbar>
+    </q-footer>
   </q-layout>
 </template>
 
@@ -146,5 +200,29 @@ export default defineComponent({
 
 .toolbar {
   background: #232323;
+}
+
+#footer {
+  background: #232323;
+}
+
+.footer-row {
+  flex-wrap: wrap !important;
+}
+
+.dot {
+  color: #ffb510;
+}
+
+.author {
+  font-size: 14px;
+  margin: 0;
+  a {
+    color: white;
+  }
+}
+
+.footer-links {
+  border-radius: 30px;
 }
 </style>
