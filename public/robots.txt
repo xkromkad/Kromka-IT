@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kromka.it/sitemap.xml

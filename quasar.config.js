@@ -11,7 +11,9 @@
 const { configure } = require('quasar/wrappers');
 const path = require('path');
 
-module.exports = configure(function (/* ctx */) {
+module.exports = configure(async function (/* ctx */) {
+  const ViteSitemap = (await import('vite-plugin-sitemap')).default;
+  const Pages = (await import('vite-plugin-pages')).default;
   return {
     eslint: {
       // fix: true,
@@ -78,17 +80,25 @@ module.exports = configure(function (/* ctx */) {
         [
           '@intlify/vite-plugin-vue-i18n',
           {
-            // if you want to use Vue I18n Legacy API, you need to set `compositionOnly: false`
-            // compositionOnly: false,
-
-            // if you want to use named tokens in your Vue I18n messages, such as 'Hello {name}',
-            // you need to set `runtimeOnly: false`
-            // runtimeOnly: false,
-
-            // you need to set i18n resource including paths !
             include: path.resolve(__dirname, './src/i18n/**'),
           },
         ],
+        Pages(), // Use Pages plugin here to define your routes
+        ViteSitemap({
+          hostname: 'https://kromka.it',
+          outDir: path.resolve(__dirname, 'dist/spa'),
+          routes: async () => {
+            const pages = Pages();
+            const routes = await pages.resolveRoutes();
+
+            return routes.map((route) => ({
+              url: route.path,
+              changefreq: 'daily',
+              priority: 1.0,
+              lastmod: new Date().toISOString(),
+            }));
+          },
+        }),
       ],
     },
 
