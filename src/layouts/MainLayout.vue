@@ -61,7 +61,11 @@
           <q-toolbar-title>Kromka<span class="dot">.</span>IT</q-toolbar-title>
           <p class="author">Copyright © 2024 Dávid Kromka</p>
           <p class="author">
-            <a href="mailto:david@kromka.it">david@kromka.it</a>
+            <a
+              aria-label="Pošlite mail na emailovú adresu Dávida Kromku"
+              href="mailto:david@kromka.it"
+              >david@kromka.it</a
+            >
           </p>
         </div>
         <div class="col-12 col-sm-6">
@@ -71,6 +75,7 @@
                 class="q-mx-md"
                 href="https://github.com/xkromkad"
                 title="Github Dávid Kromka"
+                aria-label="Navštívte github Dávida Kromku"
                 target="_blank"
               >
                 <img
@@ -83,6 +88,7 @@
                 class="q-mx-md"
                 href="https://www.linkedin.com/in/d%C3%A1vid-kromka-497978217"
                 title="Linkedin Dávid Kromka"
+                aria-label="Navštívte linkedin Dávida Kromku"
                 target="_blank"
               >
                 <img
@@ -95,6 +101,7 @@
                 class="q-mx-md"
                 href="https://www.instagram.com/davidkromka/"
                 title="Instagram Dávid Kromka"
+                aria-label="Navštívte instagram Dávida Kromku"
                 target="_blank"
               >
                 <img

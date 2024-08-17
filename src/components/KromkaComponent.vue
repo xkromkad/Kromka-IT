@@ -8,14 +8,14 @@
       ></q-img>
     </div>
     <div class="col-md-6 col-12 text-container">
-      <h2 class="q-mx-md">
+      <h2 class="q-mx-md" style="font-size: 1.7rem">
         Ahoj!
         <div class="video-background-hello" style="display: inline">
           <video ref="videoElement" :src="webmSource" muted playsinline></video>
           Volám sa
         </div>
         <br />
-        <span class="bold">Dávid Kromka</span>
+        <b>Dávid Kromka</b>
       </h2>
       <div class="justify-center text-center q-ma-md">
         <p class="text-weight-medium text-center">
@@ -32,7 +32,13 @@
           >
           STU v Bratislave a pracoval na viacerých medzinárodných projektoch.
         </p>
-        <q-btn no-caps unelevated rounded aria-label="Viac informácií o mne" class="k-background q-mt-md">
+        <q-btn
+          no-caps
+          unelevated
+          rounded
+          aria-label="Viac informácií o mne"
+          class="k-background q-mt-md"
+        >
           <div>Viac o mne</div>
           <q-icon class="q-ml-sm" size="1.5rem" name="o_expand_circle_down" />
         </q-btn>

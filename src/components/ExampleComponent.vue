@@ -20,6 +20,7 @@
         class="q-mx-md"
         href="https://github.com/xkromkad"
         title="Github Dávid Kromka"
+        aria-label="Navštívte github Dávida Kromku"
         target="_blank"
       >
         <img
@@ -32,6 +33,7 @@
         class="q-mx-md"
         href="https://www.linkedin.com/in/d%C3%A1vid-kromka-497978217"
         title="Linkedin Dávid Kromka"
+        aria-label="Navštívte linkedin Dávida Kromku"
         target="_blank"
       >
         <img
@@ -44,6 +46,7 @@
         class="q-mx-md"
         href="https://www.instagram.com/davidkromka/"
         title="Instagram Dávid Kromka"
+        aria-label="Navštívte instagram Dávida Kromku"
         target="_blank"
       >
         <img

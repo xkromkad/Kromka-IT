@@ -184,3 +184,71 @@ ul li .descr::before {
 a {
   color: black;
 }
+
+//work
+
+.work-background {
+  font-weight: 500;
+  max-width: 1200px;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+table {
+  border-radius: 30px;
+  background: linear-gradient(45deg, #c49702, #232323);
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  a {
+    color: white;
+  }
+}
+
+th,
+td {
+  padding: 15px;
+  padding-inline: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+th {
+  text-align: left;
+}
+
+thead {
+  th {
+    background-color: #333333;
+  }
+}
+
+tbody {
+  tr {
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.152);
+    }
+  }
+  td {
+    position: relative;
+    &:hover {
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -9999px;
+        bottom: -9999px;
+        background-color: rgba(255, 255, 255, 0.2);
+        z-index: -1;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 438px) {
+  td {
+    font-size: 11px;
+    padding-inline: 2px;
+  }
+}
