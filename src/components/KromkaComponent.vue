@@ -16,8 +16,11 @@
         </div>
       </h2>
       <br />
-      <h1 class="main-title" style="line-height: initial; font-size: 1.7rem">
-        <b>Dávid Kromka</b>
+      <h1
+        class="main-title"
+        style="line-height: initial; font-size: 1.7rem; font-weight: 600"
+      >
+        Dávid Kromka
       </h1>
 
       <div class="justify-center text-center q-ma-md">
