@@ -3,8 +3,8 @@
     <div class="box">
       <div class="title">
         <span class="block"></span>
-        <h1>Kromka <span></span></h1>
-        <h1 style="margin-left: 1.5rem">IT</h1>
+        <h2 class="kromkait">Kromka <span></span></h2>
+        <h2 class="kromkait" style="margin-left: 1.5rem">IT</h2>
       </div>
 
       <div class="role">

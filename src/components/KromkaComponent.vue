@@ -8,15 +8,18 @@
       ></q-img>
     </div>
     <div class="col-md-6 col-12 text-container">
-      <h2 class="q-mx-md" style="font-size: 1.7rem">
+      <h2 class="q-mx-md" style="font-size: 1.7rem; line-height: initial">
         Ahoj!
         <div class="video-background-hello" style="display: inline">
           <video ref="videoElement" :src="webmSource" muted playsinline></video>
           Volám sa
         </div>
-        <br />
-        <b>Dávid Kromka</b>
       </h2>
+      <br />
+      <h1 class="main-title" style="line-height: initial; font-size: 1.7rem">
+        <b>Dávid Kromka</b>
+      </h1>
+
       <div class="justify-center text-center q-ma-md">
         <p class="text-weight-medium text-center">
           Som mladý programátor so zameraním na moderné
