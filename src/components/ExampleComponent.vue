@@ -24,7 +24,7 @@
         target="_blank"
       >
         <img
-          src="src/assets/icons/github.svg"
+          :src="github"
           style="width: 3.5vw; max-width: 2.8rem; min-width: 1.9rem"
           alt="Github Dávida Kromku"
         />
@@ -37,7 +37,7 @@
         target="_blank"
       >
         <img
-          src="src/assets/icons/linkedin.svg"
+          :src="linkedin"
           style="width: 3.5vw; max-width: 2.8rem; min-width: 1.9rem"
           alt="Linkedin Dávida Kromku"
         />
@@ -50,7 +50,7 @@
         target="_blank"
       >
         <img
-          src="src/assets/icons/instagram.svg"
+          :src="instagram"
           style="width: 3.5vw; max-width: 2.8rem; min-width: 1.9rem"
           alt="Instagram Dávida Kromku"
         />
@@ -62,6 +62,9 @@
 <script lang="ts">
 import { defineComponent, PropType, computed, ref, toRef, Ref } from 'vue';
 import { Todo, Meta } from './models';
+import github from 'src/assets/icons/github.svg';
+import instagram from 'src/assets/icons/instagram.svg';
+import linkedin from 'src/assets/icons/linkedin.svg';
 
 function useClickCount() {
   const clickCount = ref(0);
@@ -98,7 +101,13 @@ export default defineComponent({
     },
   },
   setup(props) {
-    return { ...useClickCount(), ...useDisplayTodo(toRef(props, 'todos')) };
+    return {
+      ...useClickCount(),
+      ...useDisplayTodo(toRef(props, 'todos')),
+      github,
+      instagram,
+      linkedin,
+    };
   },
 });
 </script>

@@ -2,7 +2,7 @@
   <div class="row full-width q-mt-xl" style="max-width: 1200px">
     <div class="col-md-6 col-12 text-center img-container">
       <q-img
-        src="src/assets/images/david.png"
+        :src="david"
         width="25rem"
         alt="Portrét Dávid Kromka - webový vývojár"
       ></q-img>
@@ -79,6 +79,7 @@
 <script lang="ts">
 import { defineComponent, onMounted, ref } from 'vue';
 import hello from 'src/assets/videos/hello.webm';
+import david from 'src/assets/images/david.png';
 
 export default defineComponent({
   name: 'KromkaComponent',
@@ -113,7 +114,7 @@ export default defineComponent({
       }
     });
 
-    return { webmSource, videoElement };
+    return { webmSource, videoElement, david };
   },
 });
 </script>

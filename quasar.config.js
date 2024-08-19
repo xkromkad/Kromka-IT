@@ -86,7 +86,7 @@ module.exports = configure(async function (/* ctx */) {
         Pages(), // Use Pages plugin here to define your routes
         ViteSitemap({
           hostname: 'https://kromka.it',
-          outDir: path.resolve(__dirname, 'dist/spa'),
+          outDir: path.resolve(__dirname, 'dist/ssr'),
           routes: async () => {
             const pages = Pages();
             const routes = await pages.resolveRoutes();

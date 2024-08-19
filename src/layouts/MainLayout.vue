@@ -79,7 +79,7 @@
                 target="_blank"
               >
                 <img
-                  src="src/assets/icons/github.svg"
+                  :src="github"
                   style="width: 3.5vw; max-width: 2rem; min-width: 1.9rem"
                   alt="Github Dávid Kromka"
                 />
@@ -92,7 +92,7 @@
                 target="_blank"
               >
                 <img
-                  src="src/assets/icons/linkedin.svg"
+                  :src="linkedin"
                   style="width: 3.5vw; max-width: 2rem; min-width: 1.9rem"
                   alt="Linkedin Dávid Kromka"
                 />
@@ -105,7 +105,7 @@
                 target="_blank"
               >
                 <img
-                  src="src/assets/icons/instagram.svg"
+                  :src="instagram"
                   style="width: 3.5vw; max-width: 2rem; min-width: 1.9rem"
                   alt="Instagram Dávid Kromka"
                 />
@@ -121,6 +121,9 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import EssentialLink from 'components/EssentialLink.vue';
+import github from 'src/assets/icons/github.svg';
+import instagram from 'src/assets/icons/instagram.svg';
+import linkedin from 'src/assets/icons/linkedin.svg';
 
 const linksList = [
   {
@@ -173,6 +176,9 @@ export default defineComponent({
     const leftDrawerOpen = ref(false);
 
     return {
+      github,
+      instagram,
+      linkedin,
       model,
       essentialLinks: linksList,
       leftDrawerOpen,
