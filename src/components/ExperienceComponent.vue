@@ -32,7 +32,7 @@
         </div>
         <div class="descr"></div>
       </li>
-      <li style="--accent-color: #fbca3e">
+      <li style="--accent-color: #41516c">
         <div class="date">2023</div>
         <div class="description">
           <b>FIIT STU</b> Ukončenie bakalarského stupňa štúdia na
@@ -50,7 +50,7 @@
         </div>
         <div class="descr"></div>
       </li>
-      <li style="--accent-color: #1b5f8c">
+      <li style="--accent-color: #41516c">
         <div class="date">2022</div>
         <div class="description">
           <b>Tvorba webu 5</b> Kurz Tvorba, programovanie webstránok V. -
@@ -106,7 +106,7 @@
         </div>
         <div class="descr"></div>
       </li>
-      <li style="--accent-color: #fdc100">
+      <li style="--accent-color: #41516c">
         <div class="date">2021</div>
         <div class="description">
           <b>DAŠ-ka</b> Ukončenie
@@ -132,7 +132,7 @@
         </div>
         <div class="descr"></div>
       </li>
-      <li style="--accent-color: #55608f">
+      <li style="--accent-color: #41516c">
         <div class="date">2020</div>
         <div class="description">
           <b>FIIT STU</b> Začiatok bakalarského stupňa štúdia na
@@ -165,7 +165,6 @@
             <th>Zamestnávateľ</th>
             <th>Trvanie</th>
             <th>Pozícia</th>
-            <th>Opis</th>
           </tr>
         </thead>
         <tbody>
@@ -180,14 +179,6 @@
             </td>
             <td>2022 - súčasnosť</td>
             <td>Full-stack developer</td>
-            <td>
-              Sen Systems je členom medzinárodnej skupiny
-              <a target="_blank" href="https://sensystems.sk/latschbacher/"
-                >Latschbacher</a
-              >. V súčasnosti je táto spoločnosť ich hlavným vývojárom
-              informačných a komunikačných technológií. Zameriava sa na vývoj
-              webových, desktopových aplikácií a komplexné databázové riešenia.
-            </td>
           </tr>
           <tr>
             <td>
@@ -201,10 +192,6 @@
             </td>
             <td>2023</td>
             <td>Tester prístupnosti webových aplikácií</td>
-            <td>
-              Testovanie prístupnosti štátných webových sídel podľa pravidiel
-              WCAG.
-            </td>
           </tr>
           <tr>
             <td>
@@ -219,10 +206,6 @@
             <td>
               Učiteľ informatiky, prekladateľ z anglického do slovenského jazyka
             </td>
-            <td>
-              Algorithmics je medzinárodná škola programovania pre deti vo veku
-              7 - 17 rokov, ktorá pôsobí vo viac ako 90 krajín sveta.
-            </td>
           </tr>
         </tbody>
       </table>
@@ -234,7 +217,6 @@
 <script lang="ts">
 import { defineComponent, onMounted, ref } from 'vue';
 import rocket from 'src/assets/videos/rocket.webm';
-
 export default defineComponent({
   name: 'ExperienceComponent',
   setup() {
