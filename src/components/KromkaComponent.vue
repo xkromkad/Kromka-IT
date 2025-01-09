@@ -1,5 +1,5 @@
 <template>
-  <div class="row full-width q-mt-xl" style="max-width: 1200px">
+  <div class="row full-width q-mt-xl" style="max-width: 1200px" id="kromka">
     <div class="col-md-6 col-12 text-center img-container">
       <q-img
         src="src/assets/images/david.png"

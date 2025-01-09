@@ -1,5 +1,5 @@
 <template>
-  <div class="row items-center q-gutter-sm">
+  <div class="row items-center q-gutter-sm" id="experience">
     <h2 class="col-shrink">Skúsenosti</h2>
     <div class="video-background col">
       <video
@@ -174,11 +174,11 @@
                 href="https://sensystems.sk"
                 target="_blank"
                 aria-label="Navštívte stránku spoločnosti SEN Systems"
-                >SEN Systens</a
+                >SEN Systems</a
               >
             </td>
             <td>2022 - súčasnosť</td>
-            <td>Full-stack developer</td>
+            <td>Full-stack developer (.NET, MS SQL)</td>
           </tr>
           <tr>
             <td>
@@ -191,7 +191,7 @@
               >
             </td>
             <td>2023</td>
-            <td>Tester prístupnosti webových aplikácií</td>
+            <td>Tester prístupnosti webových sídel a mobilných aplikácií</td>
           </tr>
           <tr>
             <td>
@@ -204,7 +204,7 @@
             </td>
             <td>2022</td>
             <td>
-              Učiteľ informatiky, prekladateľ z anglického do slovenského jazyka
+              Lektor programovania v jazyku <b>Python</b> a <b>Scratch</b>, prekladateľ z anglického do slovenského jazyka
             </td>
           </tr>
         </tbody>

@@ -19,6 +19,7 @@
         >
           <q-tab
             v-for="link in essentialLinks"
+            @click="scrollToElement(link.name)"
             :key="link.name"
             class="q-mx-sm"
             :name="link.name"
@@ -45,6 +46,7 @@
 
         <EssentialLink
           v-for="link in essentialLinks"
+          @click="scrollToElement(link.name)"
           :key="link.title"
           v-bind="link"
         />
@@ -59,7 +61,7 @@
       <q-toolbar class="row footer-row q-pa-md">
         <div class="col-12 col-sm-6">
           <q-toolbar-title>Kromka<span class="dot">.</span>IT</q-toolbar-title>
-          <p class="author">Copyright © 2024 Dávid Kromka</p>
+          <p class="author">Made with ❤️ in Slovakia</p>
           <p class="author">
             <a
               aria-label="Pošlite mail na emailovú adresu Dávida Kromku"
@@ -119,66 +121,111 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent, ref, onMounted, onBeforeUnmount } from 'vue';
 import EssentialLink from 'components/EssentialLink.vue';
 
 const linksList = [
-  {
-    name: 'kromka',
-    title: 'Kromka IT',
-    caption: '',
-    icon: '',
-    link: '#',
-  },
-  {
-    name: 'experience',
-    title: 'Skúsenosti',
-    caption: '',
-    icon: '',
-    link: '#experience',
-  },
-  {
-    name: 'projects',
-    title: 'Portfólio',
-    caption: '',
-    icon: '',
-    link: '#projects',
-  },
-  {
-    name: 'contact',
-    title: 'Kontakt',
-    caption: '',
-    icon: '',
-    link: '#contact',
-  },
-  {
-    name: 'blog',
-    title: 'Blog',
-    caption: '',
-    icon: '',
-    link: '#blog',
-  },
+  { name: 'kromka', title: 'Kromka IT', link: '#kromka' },
+  { name: 'experience', title: 'Skúsenosti', link: '#experience' },
+  { name: 'projects', title: 'Portfólio', link: '#projects' },
+  { name: 'contact', title: 'Kontakt', link: '#contact' },
+  { name: 'blog', title: 'Blog', link: '#blog' },
 ];
 
 export default defineComponent({
   name: 'MainLayout',
-
   components: {
     EssentialLink,
   },
-
   setup() {
-    var model = ref('kromka');
-
+    const model = ref('kromka');
     const leftDrawerOpen = ref(false);
 
+    // NEW: track whether we’re in the middle of a manual scroll triggered by a tab click
+    const isManualScrolling = ref(false);
+    let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
+
+    const scrollToElement = (tabValue: string) => {
+      // Immediately select the clicked tab
+      model.value = tabValue;
+
+      // Mark that we’re doing a manual scroll
+      isManualScrolling.value = true;
+
+      // Scroll to the element
+      const target = document.getElementById(tabValue);
+      const headerHeight = 50;
+
+      // If on a different page, redirect
+      if (window.location.pathname !== '/') {
+        window.location.href = `/#${tabValue}`;
+        return;
+      }
+
+      if (target) {
+        const targetPosition =
+          target.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = targetPosition - headerHeight;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth',
+        });
+      }
+
+      // Clear any existing timeout
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+      }
+
+      // After X ms, allow `onScroll` to update again.
+      // The time can be adjusted based on how long your page typically takes to scroll.
+      scrollTimeout = setTimeout(() => {
+        isManualScrolling.value = false;
+      }, 700);
+    };
+
+    const onScroll = () => {
+      // If we are manually scrolling, ignore
+      if (isManualScrolling.value) return;
+
+      // Otherwise, proceed with your logic to detect which section is in view
+      const scrollOffset = 200;
+      let currentSection = '';
+
+      for (const link of linksList) {
+        const sectionEl = document.getElementById(link.name);
+        if (sectionEl) {
+          const sectionTop = sectionEl.offsetTop;
+          if (window.scrollY + scrollOffset >= sectionTop) {
+            currentSection = link.name;
+          }
+        }
+      }
+
+      if (currentSection && currentSection !== model.value) {
+        model.value = currentSection;
+      }
+    };
+
+    onMounted(() => {
+      window.addEventListener('scroll', onScroll);
+    });
+
+    onBeforeUnmount(() => {
+      window.removeEventListener('scroll', onScroll);
+    });
+
+    const toggleLeftDrawer = () => {
+      leftDrawerOpen.value = !leftDrawerOpen.value;
+    };
+
     return {
+      scrollToElement,
       model,
       essentialLinks: linksList,
       leftDrawerOpen,
-      toggleLeftDrawer() {
-        leftDrawerOpen.value = !leftDrawerOpen.value;
-      },
+      toggleLeftDrawer,
     };
   },
 });
