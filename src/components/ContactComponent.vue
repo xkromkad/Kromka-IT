@@ -1,11 +1,15 @@
 <template>
-  <div class="row items-center q-gutter-sm q-mt-xl" id="contact">
+  <div class="row items-center q-gutter-sm q-mt-xl q-mb-sm" id="contact">
     <h2 class="col-shrink">Kontakt</h2>
+
     <div class="video-background col">
       <video ref="videoElement" :src="webmSource" muted playsinline></video>
     </div>
   </div>
   <div class="full-width"></div>
+  <a href="mailto:david@kromka.it" class="email-link col-shrink q-mb-xl">
+    david@kromka.it
+  </a>
 </template>
 
 <script lang="ts">
