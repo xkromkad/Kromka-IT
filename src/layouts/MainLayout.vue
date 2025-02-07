@@ -129,7 +129,6 @@ const linksList = [
   { name: 'experience', title: 'Skúsenosti', link: '#experience' },
   { name: 'projects', title: 'Portfólio', link: '#projects' },
   { name: 'contact', title: 'Kontakt', link: '#contact' },
-  { name: 'blog', title: 'Blog', link: '#blog' },
 ];
 
 export default defineComponent({
