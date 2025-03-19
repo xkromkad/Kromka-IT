@@ -3,6 +3,7 @@
     <h2 class="col-shrink">Skúsenosti</h2>
     <div class="video-background col">
       <video
+        aria-label="Animácia skúseností - raketa štartuje k novým výzvam"
         ref="videoElement"
         :src="webmSource"
         muted
@@ -57,7 +58,7 @@
           jQuery, interaktivita a úvod do JavaScriptu v školiacom stredisku
           <a
             aria-label="Navštívte stránku IT learning Slovakia"
-            href="www.itlearning.sk"
+            href="https://www.itlearning.sk"
             target="_blank"
             >IT Learning Slovakia</a
           >
@@ -68,7 +69,7 @@
           stredisku
           <a
             aria-label="Navštívte stránku IT learning Slovakia"
-            href="www.itlearning.sk"
+            href="https://www.itlearning.sk"
             target="_blank"
             >IT Learning Slovakia</a
           >
@@ -79,7 +80,7 @@
           stredisku
           <a
             aria-label="Navštívte stránku IT learning Slovakia"
-            href="www.itlearning.sk"
+            href="https://www.itlearning.sk"
             target="_blank"
             >IT Learning Slovakia</a
           >
@@ -89,7 +90,7 @@
           programovanie databázy v školiacom stredisku
           <a
             aria-label="Navštívte stránku IT learning Slovakia"
-            href="www.itlearning.sk"
+            href="https://www.itlearning.sk"
             target="_blank"
             >IT Learning Slovakia</a
           >
@@ -99,7 +100,7 @@
           HTML, CSS a JS framework formuláre v školiacom stredisku
           <a
             aria-label="Navštívte stránku IT learning Slovakia"
-            href="www.itlearning.sk"
+            href="https://www.itlearning.sk"
             target="_blank"
             >IT Learning Slovakia</a
           >
@@ -157,7 +158,7 @@
         <div class="descr"></div>
       </li>
     </ul>
-    <h3 class="education q-my-sm k-background">Práca</h3>
+    <h3 class="education q-my-sm k-background">Pracovné skúsenosti</h3>
     <div class="work-background">
       <table>
         <thead>
@@ -204,7 +205,8 @@
             </td>
             <td>2022</td>
             <td>
-              Lektor programovania v jazyku <b>Python</b> a <b>Scratch</b>, prekladateľ z anglického do slovenského jazyka
+              Lektor programovania v jazyku <b>Python</b> a <b>Scratch</b>,
+              prekladateľ z anglického do slovenského jazyka
             </td>
           </tr>
         </tbody>

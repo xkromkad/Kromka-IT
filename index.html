@@ -1,16 +1,57 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= productName %></title>
+    <title>
+      <%= productName || "Kromka IT | Dávid Kromka - Vývoj webových aplikácií"
+      %>
+    </title>
+    <meta
+      name="description"
+      content="<%= productDescription || 'Webový vývojár so skúsenosťami v ASP.NET, Blazor, SQL a Vue.js. Pracujem na medzinárodných projektoch a neustále sa vzdelávam.' %>"
+    />
     <link rel="canonical" href="https://kromka.it" />
     <meta charset="utf-8" />
-    <meta name="description" content="<%= productDescription %>" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
     <meta
       name="viewport"
       content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width<% if (ctx.mode.cordova || ctx.mode.capacitor) { %>, viewport-fit=cover<% } %>"
     />
+    <meta
+      property="og:title"
+      content="<%= productName || 'Dávid Kromka - Full-Stack Developer' %>"
+    />
+    <meta
+      property="og:description"
+      content="<%= productDescription || 'Full-Stack vývojár so skúsenosťami v ASP.NET, Blazor, SQL a Vue.js.' %>"
+    />
+    <meta property="og:image" content="https://kromka.it/src/assets/images/david.png" />
+    <meta property="og:url" content="https://kromka.it" />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="index, follow" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Dávid Kromka",
+        "jobTitle": "Web Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "SEN Systems",
+          "url": "https://sensystems.sk"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Fakulta informatiky a informačných technológií STU",
+          "url": "https://www.fiit.stuba.sk"
+        },
+        "knowsAbout": ["Blazor", "ASP.NET Core", "WinUI 3", "MS SQL", "Vue.js", "Full-Stack Development", "Web Accessibility"],
+        "sameAs": [
+          "https://www.linkedin.com/in/davidkromka",
+          "https://github.com/davidkromka"
+        ]
+      }
+    </script>
 
     <link
       rel="icon"

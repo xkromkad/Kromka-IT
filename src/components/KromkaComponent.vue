@@ -4,14 +4,21 @@
       <q-img
         src="src/assets/images/david.png"
         width="25rem"
-        alt="Portrét Dávid Kromka - webový vývojár"
+        alt="Dávid Kromka - Webový vývojár a softvérový inžinier"
+        loading="lazy"
       ></q-img>
     </div>
     <div class="col-md-6 col-12 text-container">
       <h2 class="q-mx-md" style="font-size: 1.7rem; line-height: initial">
         Ahoj!
         <div class="video-background-hello" style="display: inline">
-          <video ref="videoElement" :src="webmSource" muted playsinline></video>
+          <video
+            ref="videoElement"
+            :src="webmSource"
+            muted
+            playsinline
+            aria-label="Video animované privítanie Dávida Kromku"
+          ></video>
           Volám sa
         </div>
       </h2>
@@ -25,19 +32,25 @@
 
       <div class="justify-center text-center q-ma-md">
         <p class="text-weight-medium text-center">
-          Som mladý programátor so zameraním na moderné
-          <span class="quotation-bold k-background">webové aplikácie</span>, od
-          ich návrhu, vývoj až po nasadenie na serveri. Úspešne som ukončil
-          bakalárske štúdium na
+          Špecializujem sa na vývoj moderných
+          <span class="quotation-bold k-background">webových aplikácií</span>,
+          od ich návrhu až po nasadenie. Pracoval som na viacerých
+          <span class="quotation-bold k-background"
+            >medzinárodných projektoch</span
+          >. Úspešne som absolvoval štúdium na
           <a
             style="color: black"
             href="https://www.fiit.stuba.sk/"
             target="_blank"
-            aria-label="Navštívte stránku fakulty informatiky a informačných technológií"
-            >Fakulte informatiky a informačných technológiií</a
+            aria-label="Navštívte stránku Fakulty informatiky a informačných technológií"
           >
-          STU v Bratislave a pracoval na viacerých medzinárodných projektoch.
+            Fakulte informatiky a informačných technológií</a
+          >
+          STU v Bratislave, kde som si osvojil pokročilé technológie a metodiky
+          vývoja softvéru. Neustále sa vzdelávam a hľadám nové výzvy, ktoré mi
+          umožnia posúvať hranice digitálnych riešení.
         </p>
+
         <q-btn
           no-caps
           unelevated

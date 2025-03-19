@@ -9,7 +9,7 @@
 
       <div class="role">
         <div class="block"></div>
-        <p>Webové aplikácie</p>
+        <h3>Webové aplikácie</h3>
       </div>
     </div>
   </div>
@@ -24,6 +24,7 @@
         target="_blank"
       >
         <img
+          loading="lazy"
           src="src/assets/icons/github.svg"
           style="width: 3.5vw; max-width: 2.8rem; min-width: 1.9rem"
           alt="Github Dávida Kromku"
@@ -37,6 +38,7 @@
         target="_blank"
       >
         <img
+          loading="lazy"
           src="src/assets/icons/linkedin.svg"
           style="width: 3.5vw; max-width: 2.8rem; min-width: 1.9rem"
           alt="Linkedin Dávida Kromku"
@@ -50,6 +52,7 @@
         target="_blank"
       >
         <img
+          loading="lazy"
           src="src/assets/icons/instagram.svg"
           style="width: 3.5vw; max-width: 2.8rem; min-width: 1.9rem"
           alt="Instagram Dávida Kromku"

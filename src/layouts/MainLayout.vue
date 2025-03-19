@@ -4,6 +4,8 @@
       <q-toolbar class="text-light toolbar">
         <q-toolbar-title>
           <q-img
+            loading="lazy"
+            alt="Kromka IT logo"
             class="q-mt-sm cursor-pointer q-hoverable"
             src="src/assets/icons/kromka.png"
             spinner-color="white"
@@ -123,6 +125,7 @@
 <script lang="ts">
 import { defineComponent, ref, onMounted, onBeforeUnmount } from 'vue';
 import EssentialLink from 'components/EssentialLink.vue';
+import { useMeta } from 'quasar';
 
 const linksList = [
   { name: 'kromka', title: 'Kromka IT', link: '#kromka' },
@@ -140,55 +143,37 @@ export default defineComponent({
     const model = ref('kromka');
     const leftDrawerOpen = ref(false);
 
+    
     // NEW: track whether we’re in the middle of a manual scroll triggered by a tab click
     const isManualScrolling = ref(false);
     let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
 
     const scrollToElement = (tabValue: string) => {
-      // Immediately select the clicked tab
       model.value = tabValue;
-
-      // Mark that we’re doing a manual scroll
       isManualScrolling.value = true;
 
-      // Scroll to the element
       const target = document.getElementById(tabValue);
-      const headerHeight = 50;
-
-      // If on a different page, redirect
-      if (window.location.pathname !== '/') {
-        window.location.href = `/#${tabValue}`;
-        return;
-      }
+      const headerHeight = 80;
 
       if (target) {
         const targetPosition =
           target.getBoundingClientRect().top + window.scrollY;
         const offsetPosition = targetPosition - headerHeight;
 
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth',
-        });
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+
+        history.pushState(null, '', `#${tabValue}`); // Update the URL
       }
 
-      // Clear any existing timeout
-      if (scrollTimeout) {
-        clearTimeout(scrollTimeout);
-      }
-
-      // After X ms, allow `onScroll` to update again.
-      // The time can be adjusted based on how long your page typically takes to scroll.
+      if (scrollTimeout) clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {
         isManualScrolling.value = false;
       }, 700);
     };
 
     const onScroll = () => {
-      // If we are manually scrolling, ignore
       if (isManualScrolling.value) return;
 
-      // Otherwise, proceed with your logic to detect which section is in view
       const scrollOffset = 200;
       let currentSection = '';
 
@@ -204,11 +189,18 @@ export default defineComponent({
 
       if (currentSection && currentSection !== model.value) {
         model.value = currentSection;
+        history.pushState(null, '', `#${currentSection}`); // Update the URL
       }
     };
 
     onMounted(() => {
       window.addEventListener('scroll', onScroll);
+
+      // Scroll to section if URL has a hash
+      const hash = window.location.hash.replace('#', '');
+      if (hash) {
+        setTimeout(() => scrollToElement(hash), 200);
+      }
     });
 
     onBeforeUnmount(() => {

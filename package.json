@@ -1,8 +1,8 @@
 {
   "name": "kromka",
   "version": "0.0.1",
-  "description": "Dávid Kromka, vývojár so zameraním na dizajn a tvorbu moderných webových aplikácií. Objavte portfólio webových aplikácií a kontaktujte ma pre viac informácií.",
-  "productName": "Kromka IT | Dávid Kromka - Tvorba moderných webových aplikácií",
+  "description": "Dávid Kromka - Webový vývojár a softvérový inžinier. Tvorím moderné webové aplikácie s dôrazom na kvalitu a používateľskú skúsenosť.",
+  "productName": "Kromka IT | Dávid Kromka - Vývoj webových aplikácií",
   "author": "David Kromka <xkromkad@stuba.sk>",
   "private": false,
   "scripts": {
