@@ -3,7 +3,6 @@
     <div class="col-md-6 col-12 text-center img-container">
       <q-img
         src="src/assets/images/david.png"
-        width="25rem"
         alt="Dávid Kromka - Webový vývojár a softvérový inžinier"
         loading="lazy"
       ></q-img>
