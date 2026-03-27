@@ -117,11 +117,20 @@ export default defineComponent({
       {
         title: 'Predškoláčik',
         type: 'Web',
-        description: 'Vzdelávacia platforma pre materské školy s umelou inteligenciou.',
+        description: 'Vzdelávacia aplikácia pre deti v predškolskom veku.',
         notes: ['Vzdelávanie', 'Umelá inteligencia', 'Učenie hrou'],
-        projectUrl: 'https://predskolacik.kromka.it/',
+        projectUrl: 'https://predskolacik.app/',
         githubUrl: '',
         image: 'src/assets/images/predskolacik.png', // Add image if available
+      },
+      {
+        title: 'Pexesolab',
+        type: 'Web',
+        description: 'Generátor pexesa z vlstných obrázkov.',
+        notes: ['Vzdelávanie', 'Umelá inteligencia', 'Učenie hrou'],
+        projectUrl: 'https://pexeso.predskolacik.app/',
+        githubUrl: '',
+        image: 'src/assets/images/pexesolab.jpg', // Add image if available
       },
       {
         title: 'Sql Injection Lab',
