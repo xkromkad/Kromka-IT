@@ -1,4 +1,5 @@
 #docker build -t kromka-image .
+#docker rm -f kromka-container
 #docker run -d --name kromka-container -p 9000:9000 kromka-image
 # ----- BUILD STAGE -----
 FROM node:20-alpine AS build-stage
@@ -52,7 +53,7 @@ EXPOSE ${PORT}
 RUN npm install -g @quasar/cli
 
 # Start server module inside the container
-CMD ["quasar", "serve"]
+CMD ["quasar", "serve", "--history", "--port", "9000", "--hostname", "0.0.0.0"]
 
 # Add non-root user and set permissions
 RUN addgroup -S appgroup && adduser -S appuser -G appgroup
