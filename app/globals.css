@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-poppins text-gray-900 bg-white;
+  }
+
+  h2 {
+    @apply font-poppins font-semibold tracking-wide text-4xl text-center;
+  }
+
+  h3 {
+    @apply font-poppins tracking-wide text-2xl text-center;
+  }
+}
+
+@layer utilities {
+  .tracking-wide {
+    letter-spacing: 0.5rem;
+  }
+}

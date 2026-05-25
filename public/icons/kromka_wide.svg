@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <style bx:fonts="Staatliches">@import url(https://fonts.googleapis.com/css2?family=Staatliches%3Aital%2Cwght%400%2C400&amp;display=swap);</style>
+  </defs>
+  <rect style="stroke: rgb(0, 0, 0); fill: rgb(250, 183, 39); fill-rule: nonzero; paint-order: fill; stroke-width: 0px;" y="62.597" width="500" height="358.577" rx="90" ry="90"/>
+  <text style="font-family: Staatliches; font-size: 370px; white-space: pre;" x="2.319" y="371.543">|&lt;/&gt;</text>
+</svg>
