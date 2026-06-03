@@ -11,8 +11,7 @@
     "contact": "Kontakt"
   },
   "hero": {
-    "greeting": "Ahoj!",
-    "intro": "Volám sa",
+    "role": "Web Development",
     "name": "Dávid Kromka",
     "descPart1": "Špecializujem sa na vývoj moderných",
     "descBold1": "webových aplikácií",
@@ -24,10 +23,13 @@
     "moreBtn": "Viac o mne",
     "contactBtn": "Kontaktujte ma",
     "mottoLabel": "A moje motto?",
-    "motto": "„Webová aplikácia je viac než len kód, je to neustále sa meniaci dialóg medzi technológiou a ľuďmi.“"
+    "motto": "Webová aplikácia je viac než len kód, je to neustále sa meniaci dialóg medzi technológiou a ľuďmi."
+  },
+  "companies": {
+    "title": "Spolupráca"
   },
   "experience": {
-    "title": "Skúsenosti",
+    "title": "Vzdelanie",
     "educationTitle": "Vzdelanie",
     "workTitle": "Pracovné skúsenosti",
     "technologiesTitle": "Technológie",
@@ -36,6 +38,9 @@
       "duration": "Trvanie",
       "position": "Pozícia"
     }
+  },
+  "tech": {
+    "title": "Technológie"
   },
   "portfolio": {
     "title": "Portfólio",

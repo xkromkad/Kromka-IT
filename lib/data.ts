@@ -1,5 +1,53 @@
 export type Locale = 'sk' | 'en';
 
+export interface CompanyCooperation {
+  name: string;
+  url: string;
+  logo: string;
+  logoEn?: string;
+  description: Record<Locale, string>;
+}
+
+export const companyCooperations: CompanyCooperation[] = [
+  {
+    name: 'SEN Systems',
+    url: 'https://sensystems.sk',
+    logo: '/icons/companies/sensystems.png',
+    description: {
+      sk: 'Pracujem tu od roku 2022 ako full-stack developer. Vyvíjam webové a desktopové aplikácie pre domácich i zahraničných klientov v ASP.NET Core, Blazor, WinUI 3 a MS SQL.',
+      en: 'Working here since 2022 as a full-stack developer. Building web and desktop applications for domestic and international clients using ASP.NET Core, Blazor, WinUI 3 and MS SQL.',
+    },
+  },
+  {
+    name: 'Latschbacher',
+    url: 'https://www.latschbacher.com',
+    logo: '/icons/companies/latschbacher.png',
+    description: {
+      sk: 'Rakúska spoločnosť v oblasti lesného hospodárstva a logistiky dreva. Spolupracoval som na vývoji a údržbe ERP systému WinforstPro.',
+      en: 'Austrian company in forestry and timber logistics. Collaborated on the development and maintenance of the WinforstPro ERP system.',
+    },
+  },
+  {
+    name: 'MIRRI',
+    url: 'https://mirri.gov.sk',
+    logo: '/icons/companies/mirri_sk.png',
+    logoEn: '/icons/companies/mirri_en.png',
+    description: {
+      sk: 'Ministerstvo investícií, regionálneho rozvoja a informatizácie SR. Testoval som prístupnosť webových sídiel a mobilných aplikácií podľa noriem WCAG.',
+      en: 'Ministry of Investments, Regional Development and Informatisation of the SR. Tested accessibility of web and mobile applications according to WCAG standards.',
+    },
+  },
+  {
+    name: 'Algorithmics',
+    url: 'https://slovakia.alg.academy/svk',
+    logo: '/icons/companies/algorithmics.svg',
+    description: {
+      sk: 'Medzinárodná škola programovania pre deti a mládež. Vyučoval som programovanie v Pythone a Scratch a prekladal vzdelávacie materiály SK/EN.',
+      en: 'International coding school for children and youth. Taught Python and Scratch programming and translated educational materials from Slovak to English.',
+    },
+  },
+];
+
 export interface EducationEntry {
   label: string;
   description: string;
@@ -300,6 +348,13 @@ export const workData: Record<Locale, WorkItem[]> = {
 export const portfolioData: Record<Locale, PortfolioItem[]> = {
   sk: [
     {
+      title: 'Track My Bunny',
+      type: 'Web',
+      description: 'Aplikácia na sledovanie zdravia a pohody domácich králikov. Denné záznamy, monitorovanie hmotnosti, plánowanie liekov a vedenie veterinárnych návštev s exportom do PDF.',
+      tags: ['Zdravie zvierat', 'Sledovanie', 'Next.js'],
+      projectUrl: 'https://trackmybunny.kromka.it/',
+    },
+    {
       title: 'Predškoláčik',
       type: 'Web',
       description: 'Vzdelávacia aplikácia pre deti v predškolskom veku.',
@@ -352,6 +407,13 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
     },
   ],
   en: [
+    {
+      title: 'Track My Bunny',
+      type: 'Web',
+      description: 'A health management app for pet rabbits. Daily logs, weight trend monitoring, medication scheduling, and vet visit records with PDF export.',
+      tags: ['Pet Health', 'Tracking', 'Next.js'],
+      projectUrl: 'https://trackmybunny.kromka.it/',
+    },
     {
       title: 'Predškoláčik',
       type: 'Web',
@@ -411,44 +473,44 @@ export const techCategories: Record<Locale, TechCategory[]> = {
     {
       label: 'Backend',
       color: 'bg-timeline text-white',
-      items: ['ASP.NET Core', 'Blazor', 'WinUI 3', '.NET', 'Python'],
+      items: ['ASP.NET Core', 'Blazor', 'WinUI 3', '.NET', 'Python', 'Node.js'],
     },
     {
       label: 'Databáza',
       color: 'bg-emerald-700 text-white',
-      items: ['MS SQL Server', 'T-SQL'],
+      items: ['MS SQL Server', 'T-SQL', 'PostgreSQL'],
     },
     {
       label: 'Frontend',
       color: 'bg-brand text-dark',
-      items: ['Vue.js', 'Quasar', 'TypeScript', 'JavaScript', 'HTML', 'CSS / SCSS'],
+      items: ['Vue.js', 'React', 'Quasar', 'TypeScript', 'JavaScript', 'HTML', 'CSS / SCSS'],
     },
     {
       label: 'Nástroje & Ostatné',
       color: 'bg-gray-600 text-white',
-      items: ['Bootstrap', 'jQuery', 'Git', 'WCAG Accessibility'],
+      items: ['Bootstrap', 'DevExpress', 'jQuery', 'Git', 'Docker', 'Claude Code', 'WCAG Accessibility'],
     },
   ],
   en: [
     {
       label: 'Backend',
       color: 'bg-timeline text-white',
-      items: ['ASP.NET Core', 'Blazor', 'WinUI 3', '.NET', 'Python'],
+      items: ['ASP.NET Core', 'Blazor', 'WinUI 3', '.NET', 'Python', 'Node.js'],
     },
     {
       label: 'Database',
       color: 'bg-emerald-700 text-white',
-      items: ['MS SQL Server', 'T-SQL'],
+      items: ['MS SQL Server', 'T-SQL', 'PostgreSQL'],
     },
     {
       label: 'Frontend',
       color: 'bg-brand text-dark',
-      items: ['Vue.js', 'Quasar', 'TypeScript', 'JavaScript', 'HTML', 'CSS / SCSS'],
+      items: ['Vue.js', 'React', 'Quasar', 'TypeScript', 'JavaScript', 'HTML', 'CSS / SCSS'],
     },
     {
       label: 'Tools & Other',
       color: 'bg-gray-600 text-white',
-      items: ['Bootstrap', 'jQuery', 'Git', 'WCAG Accessibility'],
+      items: ['Bootstrap', 'DevExpress', 'jQuery', 'Git', 'Docker', 'Claude Code', 'WCAG Accessibility'],
     },
   ],
 };
