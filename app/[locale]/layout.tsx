@@ -2,10 +2,9 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
-import Script from 'next/script';
-import { GoogleAnalytics } from '@next/third-parties/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import CookieBanner from '@/components/CookieBanner';
 
 const locales = ['sk', 'en'];
 
@@ -62,6 +61,14 @@ const jsonLd = {
   jobTitle: 'Full-Stack Web Developer',
   url: 'https://kromka.it',
   email: 'david@kromka.it',
+  image: 'https://kromka.it/images/david.png',
+  description:
+    'Full-stack developer based in Bratislava, Slovakia. Specialising in ASP.NET Core, Blazor, WinUI 3 and MS SQL. Available for commercial projects.',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Bratislava',
+    addressCountry: 'SK',
+  },
   worksFor: {
     '@type': 'Organization',
     name: 'SEN Systems',
@@ -106,13 +113,7 @@ export default async function LocaleLayout({
       <Header />
       <main className="pt-20">{children}</main>
       <Footer />
-      <GoogleAnalytics gaId="G-2ZB2FTTLTF" />
-      <Script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3215849122189091"
-        crossOrigin="anonymous"
-        strategy="lazyOnload"
-      />
+      <CookieBanner />
     </NextIntlClientProvider>
   );
 }

@@ -58,6 +58,50 @@ export default function HeroSection({ locale: _locale }: { locale: Locale }) {
                 >
                   {t('contactBtn')}
                 </ScrollButton>
+                <a
+                  href="/CV_Kromka.pdf"
+                  download
+                  className="inline-flex items-center gap-2 border-2 border-brand text-dark text-sm font-semibold px-7 py-3.5 rounded-full hover:bg-brand transition-all"
+                >
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  </svg>
+                  {t('cvBtn')}
+                </a>
+              </div>
+
+              {/* Social links */}
+              <div className="flex items-center gap-3 mt-7 justify-center md:justify-start">
+                <a
+                  href="https://github.com/xkromkad"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  className="w-10 h-10 rounded-full border border-gray-200 bg-white shadow-sm flex items-center justify-center hover:border-dark hover:shadow-md transition-all"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/icons/github.svg" alt="GitHub" width={18} height={18} />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/d%C3%A1vid-kromka-497978217"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="w-10 h-10 rounded-full border border-gray-200 bg-white shadow-sm flex items-center justify-center hover:border-dark hover:shadow-md transition-all"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/icons/linkedin.svg" alt="LinkedIn" width={18} height={18} />
+                </a>
+                <a
+                  href="https://www.instagram.com/davidkromka/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="w-10 h-10 rounded-full border border-gray-200 bg-white shadow-sm flex items-center justify-center hover:border-dark hover:shadow-md transition-all"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/icons/instagram.svg" alt="Instagram" width={18} height={18} />
+                </a>
               </div>
             </div>
 

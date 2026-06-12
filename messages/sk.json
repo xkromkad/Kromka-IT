@@ -6,8 +6,10 @@
   },
   "nav": {
     "home": "Kromka IT",
-    "experience": "Skúsenosti",
+    "companies": "Spolupráce",
     "portfolio": "Portfólio",
+    "technologies": "Technológie",
+    "experience": "Skúsenosti",
     "contact": "Kontakt"
   },
   "hero": {
@@ -22,11 +24,12 @@
     "descPart4": "STU v Bratislave, kde som si osvojil pokročilé technológie a metodiky vývoja softvéru.",
     "moreBtn": "Viac o mne",
     "contactBtn": "Kontaktujte ma",
+    "cvBtn": "Stiahnuť CV",
     "mottoLabel": "A moje motto?",
     "motto": "Webová aplikácia je viac než len kód, je to neustále sa meniaci dialóg medzi technológiou a ľuďmi."
   },
   "companies": {
-    "title": "Spolupráca"
+    "title": "Spolupráce"
   },
   "experience": {
     "title": "Vzdelanie",
@@ -75,5 +78,11 @@
     "title": "Podmienky používania",
     "lastUpdated": "Posledná aktualizácia: január 2025",
     "backHome": "Späť na hlavnú stránku"
+  },
+  "cookies": {
+    "message": "Táto stránka používa cookies na analytiku a zobrazovanie reklám. Vaše súkromie je pre nás dôležité.",
+    "learnMore": "Viac informácií",
+    "accept": "Prijať všetky",
+    "decline": "Odmietnuť"
   }
 }

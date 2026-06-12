@@ -28,7 +28,7 @@ export default function PortfolioSection({ locale }: { locale: Locale }) {
               <div className="relative h-44 w-full overflow-hidden bg-gray-100">
                 <Image
                   src={item.image}
-                  alt={item.title}
+                  alt={item.imageAlt ?? item.title}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

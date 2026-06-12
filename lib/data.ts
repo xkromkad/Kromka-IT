@@ -76,6 +76,7 @@ export interface PortfolioItem {
   projectUrl?: string;
   githubUrl?: string;
   image?: string;
+  imageAlt?: string;
 }
 
 export interface TechCategory {
@@ -86,6 +87,18 @@ export interface TechCategory {
 
 export const educationData: Record<Locale, EducationYear[]> = {
   sk: [
+    {
+      year: '2025',
+      entries: [
+        {
+          label: 'FIIT STU',
+          description: 'Ukončenie inžinierskeho stupňa štúdia na',
+          url: 'https://www.fiit.stuba.sk',
+          urlLabel: 'Fakulte informatiky a informačných technológií',
+          urlSuffix: 'STU v Bratislave',
+        },
+      ],
+    },
     {
       year: '2024',
       entries: [
@@ -193,6 +206,18 @@ export const educationData: Record<Locale, EducationYear[]> = {
     },
   ],
   en: [
+    {
+      year: '2025',
+      entries: [
+        {
+          label: 'FIIT STU',
+          description: "Completed Master's degree at the",
+          url: 'https://www.fiit.stuba.sk',
+          urlLabel: 'Faculty of Informatics and Information Technologies',
+          urlSuffix: 'of STU in Bratislava',
+        },
+      ],
+    },
     {
       year: '2024',
       entries: [
@@ -353,57 +378,65 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
       description: 'Aplikácia na sledovanie zdravia a pohody domácich králikov. Denné záznamy, monitorovanie hmotnosti, plánowanie liekov a vedenie veterinárnych návštev s exportom do PDF.',
       tags: ['Zdravie zvierat', 'Sledovanie', 'Next.js'],
       projectUrl: 'https://trackmybunny.kromka.it/',
+      image: '/images/trackmybunny.jpg',
+      imageAlt: 'Screenshot aplikácie Track My Bunny – sledovanie zdravia a hmotnosti domácich králikov',
     },
     {
       title: 'Predškoláčik',
       type: 'Web',
-      description: 'Vzdelávacia aplikácia pre deti v predškolskom veku.',
+      description: 'Vzdelávacia aplikácia pre deti v predškolskom veku, ktorá využíva umelú inteligenciu na generovanie interaktívnych úloh. Rozvíja predčitateľskú gramotnosť, počítanie a logické myslenie formou hry prispôsobenej tempu každého dieťaťa.',
       tags: ['Vzdelávanie', 'Umelá inteligencia', 'Učenie hrou'],
       projectUrl: 'https://predskolacik.app/',
-      image: '/images/predskolacik.png',
+      image: '/images/predskolacik.jpg',
+      imageAlt: 'Screenshot aplikácie Predškoláčik – interaktívne vzdelávacie úlohy pre predškolské deti',
     },
     {
       title: 'Pexesolab',
       type: 'Web',
-      description: 'Generátor pexesa z vlastných obrázkov.',
+      description: 'Generátor pexesa z vlastných obrázkov. Nahrajte ľubovoľné fotografie a aplikácia s pomocou umelej inteligencie automaticky vytvorí pamäťovú hru – ideálne pre učiteľov, rodičov a deti.',
       tags: ['Vzdelávanie', 'Umelá inteligencia', 'Učenie hrou'],
       projectUrl: 'https://pexeso.predskolacik.app/',
       image: '/images/pexesolab.jpg',
+      imageAlt: 'Screenshot generátora Pexesolab – tvorba pamäťovej hry z vlastných fotografií',
     },
     {
       title: 'SQL Injection Lab',
       type: 'Web',
-      description: 'Laboratórium na bezpečné a legálne trénovanie svojich zručností v útokoch SQL Injection.',
+      description: 'Laboratórium na bezpečné a legálne trénovanie útočných techník SQL Injection. Obsahuje sériu úrovní s realistickými scenármi, vysvetleniami zraniteľností a radami na obranu – vhodné pre študentov aj profesionálov.',
       tags: ['SQL Injection', 'Informačná bezpečnosť', 'Vzdelávanie'],
       projectUrl: 'https://sqlinjectionlab.kromka.it/',
       githubUrl: 'https://github.com/xkromkad/SQLInjectionLab',
       image: '/images/sqlinjection.png',
+      imageAlt: 'Screenshot SQL Injection Lab – cvičné prostredie na trénovanie bezpečnostných zručností',
     },
     {
       title: 'Mirka a Dávid',
       type: 'Web',
-      description: 'Svadobná stránka s informáciami pre hostí a možnosťou nahrávania fotiek.',
+      description: 'Svadobná stránka s informáciami pre hostí, harmonogramom dňa a možnosťou nahrávania a zdieľania fotografií. Vytvorená na mieru ako darček pre novomanželov.',
       tags: ['Svadobná stránka', 'Informácie pre hostí', 'Zdieľanie fotografií'],
       projectUrl: 'https://mirkaadavid.kromka.it/',
       githubUrl: 'https://github.com/xkromkad/mirkaadavid',
       image: '/images/svadba.png',
+      imageAlt: 'Screenshot svadobnej stránky Mirka a Dávid – informácie pre hostí a galéria fotografií',
     },
     {
       title: 'Toxipred – tímová stránka',
       type: 'Web',
-      description: 'Tímová stránka do súťaže TP CUP na FIIT STU. Cieľom projektu bolo vytvoriť predikčný model na odhaľovanie genotoxicity látok.',
+      description: 'Tímová stránka do súťaže TP CUP na FIIT STU. Cieľom projektu bolo vytvoriť predikčný model na odhaľovanie genotoxicity látok pomocou strojového učenia.',
       tags: ['Školský projekt', 'Reprezentatívna stránka tímu', 'Umelá inteligencia'],
       projectUrl: 'https://toxipred.kromka.it',
       githubUrl: 'https://github.com/xkromkad/Toxipred',
       image: '/images/toxipred_team.png',
+      imageAlt: 'Screenshot tímovej stránky Toxipred pre súťaž TP CUP na FIIT STU v Bratislave',
     },
     {
       title: 'Toxipred – predikcia genotoxicity',
       type: 'Web',
-      description: 'Voľne dostupné nástroje na predikciu fototoxicity a genotoxicity látok pomocou strojového učenia.',
+      description: 'Voľne dostupné nástroje na predikciu fototoxicity a genotoxicity látok pomocou strojového učenia. Vyvinuté v rámci výskumného projektu na FIIT STU v spolupráci s výskumným tímom.',
       tags: ['Školský projekt', 'Predikcia genotoxicity', 'Umelá inteligencia'],
       projectUrl: 'https://mltox.fiit.stuba.sk',
       image: '/images/toxipred.png',
+      imageAlt: 'Screenshot nástroja Toxipred na predikciu genotoxicity látok pomocou strojového učenia',
     },
   ],
   en: [
@@ -413,57 +446,65 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
       description: 'A health management app for pet rabbits. Daily logs, weight trend monitoring, medication scheduling, and vet visit records with PDF export.',
       tags: ['Pet Health', 'Tracking', 'Next.js'],
       projectUrl: 'https://trackmybunny.kromka.it/',
+      image: '/images/trackmybunny.jpg',
+      imageAlt: 'Screenshot of Track My Bunny app – pet rabbit health and weight tracking dashboard',
     },
     {
       title: 'Predškoláčik',
       type: 'Web',
-      description: 'Educational application for preschool-aged children.',
+      description: 'Educational application for preschool-aged children that uses AI to generate interactive exercises. It develops early literacy, counting and logical thinking through play, adapting to each child\'s own pace.',
       tags: ['Education', 'Artificial Intelligence', 'Learning Through Play'],
       projectUrl: 'https://predskolacik.app/',
-      image: '/images/predskolacik.png',
+      image: '/images/predskolacik.jpg',
+      imageAlt: 'Screenshot of Predškoláčik – AI-powered interactive learning exercises for preschool children',
     },
     {
       title: 'Pexesolab',
       type: 'Web',
-      description: 'Memory card game generator from your own images.',
+      description: 'Memory card game generator from your own images. Upload any photos and the app automatically creates a custom memory game using AI – ideal for teachers, parents and children.',
       tags: ['Education', 'Artificial Intelligence', 'Learning Through Play'],
       projectUrl: 'https://pexeso.predskolacik.app/',
       image: '/images/pexesolab.jpg',
+      imageAlt: 'Screenshot of Pexesolab – custom memory card game generator from uploaded images',
     },
     {
       title: 'SQL Injection Lab',
       type: 'Web',
-      description: 'A safe and legal laboratory for practising SQL Injection attack techniques.',
+      description: 'A safe and legal laboratory for practising SQL Injection attack techniques. Features multiple levels with realistic scenarios, vulnerability explanations and defence tips – suitable for students and professionals alike.',
       tags: ['SQL Injection', 'Information Security', 'Education'],
       projectUrl: 'https://sqlinjectionlab.kromka.it/',
       githubUrl: 'https://github.com/xkromkad/SQLInjectionLab',
       image: '/images/sqlinjection.png',
+      imageAlt: 'Screenshot of SQL Injection Lab – safe practice environment for web security skills',
     },
     {
       title: 'Mirka & David',
       type: 'Web',
-      description: 'Wedding website with guest information and photo uploading.',
+      description: 'Wedding website with guest information, day schedule, and photo uploading and sharing. Built as a custom gift for the newlyweds.',
       tags: ['Wedding Website', 'Guest Information', 'Photo Sharing'],
       projectUrl: 'https://mirkaadavid.kromka.it/',
       githubUrl: 'https://github.com/xkromkad/mirkaadavid',
       image: '/images/svadba.png',
+      imageAlt: 'Screenshot of Mirka & David wedding website – guest information and photo gallery',
     },
     {
       title: 'Toxipred – Team Page',
       type: 'Web',
-      description: 'Team page for the TP CUP competition at FIIT STU. The project goal was to build a genotoxicity prediction model.',
+      description: 'Team page for the TP CUP competition at FIIT STU. The project goal was to build a machine learning model for detecting genotoxicity of chemical substances.',
       tags: ['University Project', 'Team Page', 'Artificial Intelligence'],
       projectUrl: 'https://toxipred.kromka.it',
       githubUrl: 'https://github.com/xkromkad/Toxipred',
       image: '/images/toxipred_team.png',
+      imageAlt: 'Screenshot of Toxipred team page for the TP CUP competition at FIIT STU Bratislava',
     },
     {
       title: 'Toxipred – Genotoxicity Prediction',
       type: 'Web',
-      description: 'Freely available tools for predicting phototoxicity and genotoxicity of substances using machine learning.',
+      description: 'Freely available tools for predicting phototoxicity and genotoxicity of chemical substances using machine learning. Developed as part of a research project at FIIT STU in collaboration with the research team.',
       tags: ['University Project', 'Genotoxicity Prediction', 'Artificial Intelligence'],
       projectUrl: 'https://mltox.fiit.stuba.sk',
       image: '/images/toxipred.png',
+      imageAlt: 'Screenshot of Toxipred genotoxicity prediction tool powered by machine learning',
     },
   ],
 };

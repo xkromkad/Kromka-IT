@@ -142,7 +142,7 @@ export default defineComponent({
         githubUrl: 'https://github.com/xkromkad/SQLInjectionLab',
         image: 'src/assets/images/sqlinjection.png', // Add image if available
       },
-      {
+      {ake su 
         title: 'Mirka a Dávid',
         type: 'Web',
         description:

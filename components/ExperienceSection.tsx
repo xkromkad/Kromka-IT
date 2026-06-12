@@ -16,9 +16,9 @@ export default function ExperienceSection({ locale }: { locale: Locale }) {
         <VideoPlayer src="/videos/rocket.webm" className="w-12 h-auto" loop />
       </div>
 
-      <ol className="relative border-l border-gray-200 ml-4 md:ml-0 md:border-l-0 space-y-0">
+      <ol className="relative border-l border-gray-200 ml-4 md:ml-0 md:border-l-0 space-y-10">
         {education.map((year, yi) => (
-          <li key={year.year} className="mb-10 ml-6 md:ml-0">
+          <li key={year.year} className="ml-6 md:ml-0">
             <div
               className={`md:flex md:gap-10 ${
                 yi % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'

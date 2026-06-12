@@ -1,0 +1,47 @@
+# Dávid Kromka – Kromka IT
+
+> Full-stack web developer based in Poprad, Slovakia. Specialising in modern web applications — from design to deployment. Available for freelance projects and collaborations.
+
+## About
+
+- Name: Dávid Kromka
+- Website: https://kromka.it
+- Contact: david@kromka.it
+- Location: Poprad, Slovakia
+- Education: Master's degree in Informatics, FIIT STU Bratislava (2025)
+
+## Work Experience
+
+- **SEN Systems** (2022 – present) — Full-stack developer building web and desktop applications for domestic and international clients using ASP.NET Core, Blazor, WinUI 3, and MS SQL.
+- **Ministry of Investments, Regional Development and Informatisation of SR** (2023) — Web and mobile application accessibility tester (WCAG).
+- **Algorithmics** (2022) — Python & Scratch programming instructor and SK/EN translator.
+
+## Skills & Technologies
+
+- **Backend:** ASP.NET Core, Blazor, WinUI 3, .NET, Python, Node.js
+- **Database:** MS SQL Server, T-SQL, PostgreSQL
+- **Frontend:** Vue.js, React, Quasar, TypeScript, JavaScript, HTML, CSS/SCSS
+- **Tools:** Bootstrap, DevExpress, jQuery, Git, Docker, Claude Code, WCAG Accessibility
+
+## Projects
+
+- [Track My Bunny](https://trackmybunny.kromka.it/) — Pet rabbit health management app (daily logs, weight tracking, medication scheduling, PDF export). Built with Next.js.
+- [Predškoláčik](https://predskolacik.app/) — AI-powered educational app for preschool children (early literacy, counting, logical thinking).
+- [Pexesolab](https://pexeso.predskolacik.app/) — AI-powered memory card game generator from custom images.
+- [SQL Injection Lab](https://sqlinjectionlab.kromka.it/) — Safe and legal SQL Injection practice environment for students and security professionals.
+- [Mirka & David](https://mirkaadavid.kromka.it/) — Custom wedding website with guest info, schedule, and photo sharing.
+- [Toxipred](https://mltox.fiit.stuba.sk) — Machine learning tools for genotoxicity and phototoxicity prediction (research project, FIIT STU).
+
+## Cooperations
+
+- [SEN Systems](https://sensystems.sk) — Full-stack development (ASP.NET Core, Blazor, WinUI 3, MS SQL)
+- [Latschbacher](https://www.latschbacher.com) — Austrian forestry ERP system (WinforstPro)
+- [MIRRI](https://mirri.gov.sk) — Web & mobile WCAG accessibility testing
+- [Algorithmics](https://slovakia.alg.academy/svk) — Python & Scratch instruction, SK/EN translation
+
+## Pages
+
+- [Home](https://kromka.it)
+- [English version](https://kromka.it/en)
+- [Privacy Policy](https://kromka.it/privacy-policy)
+- [Terms of Service](https://kromka.it/terms)
