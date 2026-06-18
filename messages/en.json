@@ -6,6 +6,7 @@
   },
   "nav": {
     "home": "Kromka IT",
+    "services": "Services",
     "companies": "Cooperations",
     "portfolio": "Portfolio",
     "technologies": "Technologies",
@@ -27,6 +28,10 @@
     "cvBtn": "Download CV",
     "mottoLabel": "My motto?",
     "motto": "A web application is more than just code — it is an ever-changing dialogue between technology and people."
+  },
+  "services": {
+    "title": "What I Offer",
+    "subtitle": "End-to-end web and software development services – from design all the way to deployment."
   },
   "companies": {
     "title": "Cooperations"

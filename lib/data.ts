@@ -1,5 +1,80 @@
 export type Locale = 'sk' | 'en';
 
+export interface Service {
+  icon: string;
+  title: Record<Locale, string>;
+  description: Record<Locale, string>;
+}
+
+export const services: Service[] = [
+  {
+    icon: 'web',
+    title: {
+      sk: 'Vývoj webových aplikácií',
+      en: 'Web Application Development',
+    },
+    description: {
+      sk: 'Návrh a vývoj moderných webových aplikácií na mieru – od prvého konceptu cez implementáciu až po nasadenie.',
+      en: 'Designing and building modern, custom web applications – from the first concept through implementation to deployment.',
+    },
+  },
+  {
+    icon: 'fullstack',
+    title: {
+      sk: 'Full-stack riešenia',
+      en: 'Full-stack Solutions',
+    },
+    description: {
+      sk: 'Kompletný frontend aj backend v ASP.NET Core, Blazor, Vue.js či Next.js. Jeden partner pre celý projekt.',
+      en: 'Complete frontend and backend in ASP.NET Core, Blazor, Vue.js or Next.js. One partner for the whole project.',
+    },
+  },
+  {
+    icon: 'ai',
+    title: {
+      sk: 'Integrácia umelej inteligencie',
+      en: 'AI Integration',
+    },
+    description: {
+      sk: 'Prepojenie aplikácií s jazykovými modelmi a AI nástrojmi – inteligentné generovanie obsahu, asistenti a automatizácia.',
+      en: 'Connecting applications with language models and AI tools – smart content generation, assistants and automation.',
+    },
+  },
+  {
+    icon: 'database',
+    title: {
+      sk: 'Databázy a dáta',
+      en: 'Databases & Data',
+    },
+    description: {
+      sk: 'Návrh, optimalizácia a programovanie databáz v MS SQL Server, T-SQL a PostgreSQL pre výkonné a spoľahlivé aplikácie.',
+      en: 'Designing, optimising and programming databases in MS SQL Server, T-SQL and PostgreSQL for fast, reliable applications.',
+    },
+  },
+  {
+    icon: 'accessibility',
+    title: {
+      sk: 'Webová prístupnosť (WCAG)',
+      en: 'Web Accessibility (WCAG)',
+    },
+    description: {
+      sk: 'Testovanie a úprava webových sídiel a mobilných aplikácií podľa noriem WCAG, aby boli prístupné pre všetkých.',
+      en: 'Testing and adapting websites and mobile applications to WCAG standards so they are accessible to everyone.',
+    },
+  },
+  {
+    icon: 'teaching',
+    title: {
+      sk: 'Školenia a konzultácie',
+      en: 'Training & Consulting',
+    },
+    description: {
+      sk: 'Výuka programovania a technické konzultácie – od základov po pokročilé témy, prispôsobené tempu a cieľom.',
+      en: 'Programming lessons and technical consulting – from basics to advanced topics, tailored to your pace and goals.',
+    },
+  },
+];
+
 export interface CompanyCooperation {
   name: string;
   url: string;

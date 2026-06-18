@@ -6,6 +6,7 @@
   },
   "nav": {
     "home": "Kromka IT",
+    "services": "Služby",
     "companies": "Spolupráce",
     "portfolio": "Portfólio",
     "technologies": "Technológie",
@@ -27,6 +28,10 @@
     "cvBtn": "Stiahnuť CV",
     "mottoLabel": "A moje motto?",
     "motto": "Webová aplikácia je viac než len kód, je to neustále sa meniaci dialóg medzi technológiou a ľuďmi."
+  },
+  "services": {
+    "title": "Čo ponúkam",
+    "subtitle": "Komplexné služby v oblasti vývoja webových aplikácií a softvéru – od návrhu až po nasadenie."
   },
   "companies": {
     "title": "Spolupráce"

@@ -1,6 +1,7 @@
 import { setRequestLocale } from 'next-intl/server';
 import type { Locale } from '@/lib/data';
 import HeroSection from '@/components/HeroSection';
+import ServicesSection from '@/components/ServicesSection';
 import CompanySection from '@/components/CompanySection';
 import PortfolioSection from '@/components/PortfolioSection';
 import TechSection from '@/components/TechSection';
@@ -19,6 +20,9 @@ export default async function HomePage({
     <>
       <section id="kromka">
         <HeroSection locale={locale as Locale} />
+      </section>
+      <section id="services" className="py-24 px-4">
+        <ServicesSection locale={locale as Locale} />
       </section>
       <section id="companies" className="py-24 px-4 bg-gray-50">
         <CompanySection locale={locale as Locale} />
