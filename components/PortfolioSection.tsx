@@ -40,7 +40,7 @@ export default function PortfolioSection({ locale }: { locale: Locale }) {
               <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold mb-1">
                 {item.type}
               </p>
-              <h3 className="text-base font-bold font-poppins text-dark mb-2">{item.title}</h3>
+              <h3 className="text-base font-bold font-poppins text-dark mb-2 tracking-tight">{item.title}</h3>
               <p className="text-sm text-gray-500 leading-relaxed flex-1">{item.description}</p>
 
               <div className="flex flex-wrap gap-1.5 mt-4">

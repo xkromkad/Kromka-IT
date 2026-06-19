@@ -34,7 +34,7 @@ export default function CompanySection({ locale }: { locale: Locale }) {
               </div>
 
               {/* Company name */}
-              <h3 className="font-poppins font-semibold text-dark text-base mb-2">
+              <h3 className="font-poppins font-semibold text-dark text-base mb-2 tracking-tight">
                 {company.name}
               </h3>
 

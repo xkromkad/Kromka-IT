@@ -10,7 +10,7 @@ export default function HeroSection({ locale: _locale }: { locale: Locale }) {
       {/* Main hero */}
       <div className="flex-1 flex items-center">
         <div className="max-w-6xl mx-auto px-6 py-16 w-full">
-          <div className="flex flex-col-reverse md:flex-row items-center gap-14 md:gap-20">
+          <div className="flex flex-col md:flex-row items-center gap-14 md:gap-20">
 
             {/* Text side */}
             <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">

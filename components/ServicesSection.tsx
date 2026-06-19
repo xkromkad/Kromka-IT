@@ -62,15 +62,15 @@ export default function ServicesSection({ locale }: { locale: Locale }) {
         {services.map((service) => (
           <div
             key={service.icon}
-            className="group bg-white rounded-2xl border border-gray-100 shadow-sm p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col"
+            className="group bg-white rounded-2xl border border-gray-100 shadow-sm p-6 hover:shadow-xl hover:-translate-y-1 hover:border-brand/40 transition-all duration-300 flex flex-col"
           >
             {/* Icon */}
-            <div className="w-14 h-14 flex items-center justify-center mb-5 rounded-xl bg-brand/10 text-timeline group-hover:bg-brand group-hover:text-dark transition-colors">
+            <div className="w-14 h-14 flex items-center justify-center mb-5 rounded-xl bg-gradient-to-br from-brand to-yellow-400 text-dark shadow-md shadow-brand/30 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-brand/40 transition-all duration-300">
               <ServiceIcon icon={service.icon} />
             </div>
 
             {/* Title */}
-            <h3 className="font-poppins font-semibold text-dark text-lg mb-2">
+            <h3 className="font-poppins font-semibold text-dark text-lg mb-2 tracking-tight">
               {service.title[locale]}
             </h3>
 
