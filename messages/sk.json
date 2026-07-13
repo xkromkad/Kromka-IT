@@ -31,7 +31,20 @@
   },
   "services": {
     "title": "Čo ponúkam",
-    "subtitle": "Komplexné služby v oblasti vývoja webových aplikácií a softvéru – od návrhu až po nasadenie."
+    "subtitle": "Komplexné služby v oblasti vývoja webových aplikácií a softvéru – od návrhu až po nasadenie.",
+    "detailsBtn": "Zistiť viac",
+    "backToServices": "Späť na služby",
+    "backHome": "Späť na hlavnú stránku",
+    "breadcrumbServices": "Služby",
+    "offerTitle": "Čo ponúkam",
+    "meaningTitle": "Čo to pre vás znamená",
+    "benefitsTitle": "Prínos pre vás",
+    "techTitle": "Súvisiace technológie",
+    "ctaTitle": "Máte záujem o túto službu?",
+    "ctaSubtitle": "Napíšte mi o vašom projekte a čo najskôr sa vám ozvem.",
+    "indexTitle": "Služby",
+    "indexSubtitle": "Komplexný vývoj webu a softvéru – od webových aplikácií na mieru a full-stack riešení cez integráciu AI, databázy, prístupnosť až po konzultácie. So sídlom v Poprade, pre celé Slovensko aj na diaľku.",
+    "indexMetaDescription": "Služby vývoja webu od Dávida Kromku – webové aplikácie na mieru, full-stack riešenia, integrácia AI, databázy, prístupnosť (WCAG) a konzultácie. So sídlom v Poprade, dostupné aj na diaľku."
   },
   "companies": {
     "title": "Spolupráce"

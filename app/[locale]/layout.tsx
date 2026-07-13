@@ -60,12 +60,17 @@ const jsonLd = {
   email: 'david@kromka.it',
   image: 'https://kromka.it/images/david.png',
   description:
-    'Full-stack developer based in Bratislava, Slovakia. Specialising in ASP.NET Core, Blazor, WinUI 3 and MS SQL. Available for commercial projects.',
+    'Full-stack developer based in Poprad, Slovakia. Specialising in ASP.NET Core, Blazor, WinUI 3 and MS SQL. Available for commercial projects across Slovakia and remotely.',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Bratislava',
+    addressLocality: 'Poprad',
+    addressRegion: 'Prešovský kraj',
     addressCountry: 'SK',
   },
+  areaServed: [
+    { '@type': 'Country', name: 'Slovensko' },
+    'Remote',
+  ],
   worksFor: {
     '@type': 'Organization',
     name: 'SEN Systems',

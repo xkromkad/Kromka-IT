@@ -1,13 +1,19 @@
 export type Locale = 'sk' | 'en';
 
 export interface Service {
+  slug: string;
   icon: string;
   title: Record<Locale, string>;
   description: Record<Locale, string>;
+  longDescription: Record<Locale, string>;
+  meaning: Record<Locale, string>;
+  benefits: Record<Locale, string[]>;
+  relatedTech?: string[];
 }
 
 export const services: Service[] = [
   {
+    slug: 'web-development',
     icon: 'web',
     title: {
       sk: 'Vývoj webových aplikácií',
@@ -17,8 +23,32 @@ export const services: Service[] = [
       sk: 'Návrh a vývoj moderných webových aplikácií na mieru – od prvého konceptu cez implementáciu až po nasadenie.',
       en: 'Designing and building modern, custom web applications – from the first concept through implementation to deployment.',
     },
+    longDescription: {
+      sk: 'Navrhujem a vyvíjam moderné webové aplikácie na mieru – od prvého konceptu cez dizajn a implementáciu až po nasadenie do produkcie. Zameriavam sa na rýchle, bezpečné a dobre udržiavateľné riešenia postavené na technológiách ako Next.js, React a ASP.NET Core.\n\nOd úvodnej analýzy potrieb až po odovzdanie hotového produktu ste v kontakte s jedným človekom, ktorý rozumie celému projektu. Aplikáciu vyladím na výkon, prehľadnosť a jednoduché používanie na počítači aj mobile.',
+      en: 'I design and build modern, custom web applications – from the first concept through design and implementation to production deployment. I focus on fast, secure and maintainable solutions built on technologies such as Next.js, React and ASP.NET Core.\n\nFrom the initial needs analysis to handing over the finished product, you deal with one person who understands the whole project. I tune the application for performance, clarity and ease of use on both desktop and mobile.',
+    },
+    meaning: {
+      sk: 'V praxi to znamená, že namiesto šablóny dostanete riešenie postavené presne na vaše procesy a ciele. Webová aplikácia je interaktívny nástroj (napríklad rezervačný systém, portál či interná aplikácia), nie len statická stránka – rieši konkrétnu úlohu vášho podnikania.',
+      en: 'In practice this means that instead of a template, you get a solution built exactly around your processes and goals. A web application is an interactive tool (a booking system, a portal, an internal app) rather than a static page – it solves a concrete business task.',
+    },
+    benefits: {
+      sk: [
+        'Riešenie na mieru vašim procesom, nie generická šablóna',
+        'Rýchle načítanie a spoľahlivý chod aj pri raste návštevnosti',
+        'Jeden partner pre celý projekt – od návrhu po nasadenie',
+        'Bezproblémové fungovanie na mobile aj počítači',
+      ],
+      en: [
+        'A solution tailored to your processes, not a generic template',
+        'Fast loading and reliable operation even as traffic grows',
+        'One partner for the whole project – from design to deployment',
+        'Seamless experience on mobile and desktop',
+      ],
+    },
+    relatedTech: ['Next.js', 'React', 'ASP.NET Core', 'TypeScript', 'Tailwind CSS'],
   },
   {
+    slug: 'full-stack',
     icon: 'fullstack',
     title: {
       sk: 'Full-stack riešenia',
@@ -28,8 +58,32 @@ export const services: Service[] = [
       sk: 'Kompletný frontend aj backend v ASP.NET Core, Blazor, Vue.js či Next.js. Jeden partner pre celý projekt.',
       en: 'Complete frontend and backend in ASP.NET Core, Blazor, Vue.js or Next.js. One partner for the whole project.',
     },
+    longDescription: {
+      sk: 'Pokryjem celý projekt – používateľské rozhranie (frontend) aj serverovú logiku a dátovú vrstvu (backend). Pracujem s ASP.NET Core, Blazor, Vue.js aj Next.js, takže viem zvoliť technológiu, ktorá sa najviac hodí pre vaše zadanie.\n\nKeďže mám prehľad o celom systéme, jednotlivé časti do seba zapadajú bez zbytočných kompromisov a komunikácia je jednoduchá – všetko rieši jeden človek.',
+      en: 'I cover the whole project – both the user interface (frontend) and the server logic and data layer (backend). I work with ASP.NET Core, Blazor, Vue.js and Next.js, so I can pick the technology that best fits your requirements.\n\nBecause I have an overview of the entire system, the individual parts fit together without unnecessary compromises and communication is simple – one person handles everything.',
+    },
+    meaning: {
+      sk: '„Full-stack" znamená, že sa nemusíte spoliehať na viacero dodávateľov pre návrh, frontend a backend. Dostanete kompletné, prepojené riešenie z jedného miesta – od tlačidla, ktoré používateľ vidí, až po databázu, ktorá beží na pozadí.',
+      en: '“Full-stack” means you don’t have to rely on several vendors for design, frontend and backend. You get a complete, connected solution from one place – from the button the user sees to the database running in the background.',
+    },
+    benefits: {
+      sk: [
+        'Celé riešenie z jedného miesta – menej koordinácie pre vás',
+        'Frontend aj backend navrhnuté tak, aby spolu bezchybne fungovali',
+        'Voľba technológie podľa potrieb projektu, nie naopak',
+        'Rýchlejší vývoj a jasná zodpovednosť za výsledok',
+      ],
+      en: [
+        'The whole solution from one place – less coordination for you',
+        'Frontend and backend designed to work flawlessly together',
+        'Technology chosen to fit the project, not the other way round',
+        'Faster delivery and clear accountability for the result',
+      ],
+    },
+    relatedTech: ['ASP.NET Core', 'Blazor', 'Vue.js', 'Next.js', '.NET', 'Node.js'],
   },
   {
+    slug: 'ai-integration',
     icon: 'ai',
     title: {
       sk: 'Integrácia umelej inteligencie',
@@ -39,8 +93,32 @@ export const services: Service[] = [
       sk: 'Prepojenie aplikácií s jazykovými modelmi a AI nástrojmi – inteligentné generovanie obsahu, asistenti a automatizácia.',
       en: 'Connecting applications with language models and AI tools – smart content generation, assistants and automation.',
     },
+    longDescription: {
+      sk: 'Prepojím vašu aplikáciu s modernými jazykovými modelmi a AI nástrojmi. Viem doplniť inteligentné generovanie obsahu, virtuálnych asistentov, spracovanie dokumentov či automatizáciu opakujúcich sa úloh.\n\nMám praktické skúsenosti s tvorbou AI produktov (napríklad vzdelávacie aplikácie Predškoláčik a Pexesolab) a viem posúdiť, kde AI reálne prináša hodnotu a kde je len zbytočným nákladom.',
+      en: 'I connect your application with modern language models and AI tools. I can add smart content generation, virtual assistants, document processing or automation of repetitive tasks.\n\nI have hands-on experience building AI products (for example the educational apps Predškoláčik and Pexesolab) and can judge where AI genuinely adds value and where it is just an unnecessary cost.',
+    },
+    meaning: {
+      sk: 'Integrácia AI neznamená „nahradiť ľudí robotom". Znamená to pridať do vašej aplikácie funkcie, ktoré šetria čas – automaticky pripravia text, odpovedia na časté otázky alebo spracujú dáta, ktoré by inak niekto robil ručne.',
+      en: 'AI integration does not mean “replacing people with robots”. It means adding features to your application that save time – automatically drafting text, answering frequent questions, or processing data someone would otherwise handle manually.',
+    },
+    benefits: {
+      sk: [
+        'Automatizácia opakujúcich sa úloh a úspora času',
+        'Inteligentné generovanie obsahu a odpovedí',
+        'Reálne skúsenosti z nasadených AI produktov',
+        'Odborné posúdenie, kde má AI zmysel a kde nie',
+      ],
+      en: [
+        'Automation of repetitive tasks and time savings',
+        'Smart generation of content and responses',
+        'Real experience from shipped AI products',
+        'Honest assessment of where AI makes sense and where it doesn’t',
+      ],
+    },
+    relatedTech: ['OpenAI / LLM', 'Next.js', 'Python', '.NET', 'REST API'],
   },
   {
+    slug: 'databases',
     icon: 'database',
     title: {
       sk: 'Databázy a dáta',
@@ -50,8 +128,32 @@ export const services: Service[] = [
       sk: 'Návrh, optimalizácia a programovanie databáz v MS SQL Server, T-SQL a PostgreSQL pre výkonné a spoľahlivé aplikácie.',
       en: 'Designing, optimising and programming databases in MS SQL Server, T-SQL and PostgreSQL for fast, reliable applications.',
     },
+    longDescription: {
+      sk: 'Navrhujem, optimalizujem a programujem databázy v MS SQL Server, T-SQL a PostgreSQL. Postarám sa o správnu štruktúru dát, rýchle dotazy, indexy a spoľahlivé ukladanie, na ktorom stojí každá seriózna aplikácia.\n\nAk je vaša aplikácia pomalá alebo dáta narástli, viem existujúcu databázu preveriť, nájsť úzke miesta a zrýchliť ju bez toho, aby ste museli všetko prepisovať.',
+      en: 'I design, optimise and program databases in MS SQL Server, T-SQL and PostgreSQL. I take care of the right data structure, fast queries, indexes and reliable storage that every serious application depends on.\n\nIf your application is slow or your data has grown, I can review the existing database, find the bottlenecks and speed it up without you having to rewrite everything.',
+    },
+    meaning: {
+      sk: 'Databáza je základ, na ktorom stojí celá aplikácia – tu sa ukladajú a vyhľadávajú všetky vaše dáta. Dobre navrhnutá databáza znamená rýchlu aplikáciu a dáta, ktorým môžete dôverovať; zle navrhnutá skôr či neskôr spôsobí pomalé načítanie a chyby.',
+      en: 'The database is the foundation the whole application stands on – it is where all your data is stored and retrieved. A well-designed database means a fast application and data you can trust; a poorly designed one sooner or later causes slow loading and errors.',
+    },
+    benefits: {
+      sk: [
+        'Rýchlejšie dotazy a odozva aplikácie',
+        'Spoľahlivé a bezpečné ukladanie dát',
+        'Optimalizácia existujúcich databáz bez prepisu celej aplikácie',
+        'Dátová štruktúra pripravená na budúci rast',
+      ],
+      en: [
+        'Faster queries and application response times',
+        'Reliable and secure data storage',
+        'Optimisation of existing databases without rewriting the whole app',
+        'A data structure ready for future growth',
+      ],
+    },
+    relatedTech: ['MS SQL Server', 'T-SQL', 'PostgreSQL'],
   },
   {
+    slug: 'web-accessibility',
     icon: 'accessibility',
     title: {
       sk: 'Webová prístupnosť (WCAG)',
@@ -61,8 +163,32 @@ export const services: Service[] = [
       sk: 'Testovanie a úprava webových sídiel a mobilných aplikácií podľa noriem WCAG, aby boli prístupné pre všetkých.',
       en: 'Testing and adapting websites and mobile applications to WCAG standards so they are accessible to everyone.',
     },
+    longDescription: {
+      sk: 'Testujem a upravujem webové sídla a mobilné aplikácie podľa noriem WCAG tak, aby ich mohli pohodlne používať aj ľudia so zdravotným znevýhodnením. Prístupnosť som testoval aj na Ministerstve investícií, regionálneho rozvoja a informatizácie SR.\n\nPripravím audit prístupnosti s konkrétnym zoznamom nedostatkov a odporúčaní, prípadne rovno vykonám potrebné úpravy v kóde.',
+      en: 'I test and adapt websites and mobile applications to WCAG standards so that people with disabilities can use them comfortably too. I have also tested accessibility at the Ministry of Investments, Regional Development and Informatisation of the Slovak Republic.\n\nI prepare an accessibility audit with a concrete list of issues and recommendations, or I can carry out the necessary code changes directly.',
+    },
+    meaning: {
+      sk: 'Prístupnosť (WCAG) znamená, že váš web dokáže používať naozaj každý – vrátane ľudí, ktorí zle vidia, nepočujú alebo ovládajú počítač len klávesnicou. Pre verejný sektor je to zákonná povinnosť, pre firmy zas väčší dosah a lepší obraz značky.',
+      en: 'Accessibility (WCAG) means your website can genuinely be used by everyone – including people who have low vision, are deaf, or control the computer with the keyboard only. For the public sector it is a legal obligation; for businesses it means wider reach and a stronger brand image.',
+    },
+    benefits: {
+      sk: [
+        'Súlad so zákonnými požiadavkami na prístupnosť',
+        'Väčší dosah – web použiteľný pre všetkých návštevníkov',
+        'Konkrétny audit s jasným zoznamom krokov',
+        'Skúsenosti z testovania pre štátnu správu',
+      ],
+      en: [
+        'Compliance with legal accessibility requirements',
+        'Wider reach – a site usable by all visitors',
+        'A concrete audit with a clear list of steps',
+        'Experience from testing for public administration',
+      ],
+    },
+    relatedTech: ['WCAG 2.1', 'ARIA', 'HTML', 'CSS'],
   },
   {
+    slug: 'training',
     icon: 'teaching',
     title: {
       sk: 'Školenia a konzultácie',
@@ -72,6 +198,29 @@ export const services: Service[] = [
       sk: 'Výuka programovania a technické konzultácie – od základov po pokročilé témy, prispôsobené tempu a cieľom.',
       en: 'Programming lessons and technical consulting – from basics to advanced topics, tailored to your pace and goals.',
     },
+    longDescription: {
+      sk: 'Učím programovanie a poskytujem technické konzultácie – od úplných základov až po pokročilé témy. Obsah aj tempo prispôsobím vašim cieľom, či už ide o jednotlivca, tím alebo firmu.\n\nMám skúsenosti s výukou v medzinárodnej škole programovania (Python, Scratch) aj s prípravou vzdelávacích materiálov. Poradím aj pri výbere technológií či architektúry pre váš projekt.',
+      en: 'I teach programming and provide technical consulting – from the very basics to advanced topics. I adapt both the content and the pace to your goals, whether you are an individual, a team or a company.\n\nI have experience teaching at an international coding school (Python, Scratch) and preparing educational materials. I can also advise on choosing technologies or architecture for your project.',
+    },
+    meaning: {
+      sk: 'Konzultácia znamená, že sa nemusíte rozhodovať sami – prejdeme vaše zadanie, možnosti a riziká zrozumným jazykom bez zbytočného žargónu. Školenie zas znamená, že vy alebo váš tím získate zručnosti, ktoré ostanú vo firme.',
+      en: 'Consulting means you don’t have to decide alone – we go through your task, options and risks in plain language without unnecessary jargon. Training means you or your team gain skills that stay in the company.',
+    },
+    benefits: {
+      sk: [
+        'Obsah a tempo prispôsobené vašim cieľom',
+        'Zrozumiteľné vysvetlenie bez zbytočného žargónu',
+        'Nezávislé poradenstvo pri výbere technológií',
+        'Skúsenosti z medzinárodnej školy programovania',
+      ],
+      en: [
+        'Content and pace tailored to your goals',
+        'Clear explanations without unnecessary jargon',
+        'Independent advice on choosing technologies',
+        'Experience from an international coding school',
+      ],
+    },
+    relatedTech: ['Python', 'JavaScript', 'Scratch', '.NET'],
   },
 ];
 
@@ -856,6 +1005,16 @@ export function getProjectSlugs(): string[] {
 /** Look up a single project by slug within a locale. */
 export function getProjectBySlug(locale: Locale, slug: string): PortfolioItem | undefined {
   return portfolioData[locale].find((p) => p.slug === slug);
+}
+
+/** Locale-agnostic list of service slugs. */
+export function getServiceSlugs(): string[] {
+  return services.map((s) => s.slug);
+}
+
+/** Look up a single service by slug (per-locale fields are indexed at render time). */
+export function getServiceBySlug(slug: string): Service | undefined {
+  return services.find((s) => s.slug === slug);
 }
 
 export const techCategories: Record<Locale, TechCategory[]> = {

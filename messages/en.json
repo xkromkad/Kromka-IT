@@ -31,7 +31,20 @@
   },
   "services": {
     "title": "What I Offer",
-    "subtitle": "End-to-end web and software development services – from design all the way to deployment."
+    "subtitle": "End-to-end web and software development services – from design all the way to deployment.",
+    "detailsBtn": "Learn more",
+    "backToServices": "Back to services",
+    "backHome": "Back to homepage",
+    "breadcrumbServices": "Services",
+    "offerTitle": "What I offer",
+    "meaningTitle": "What it means for you",
+    "benefitsTitle": "Benefits for you",
+    "techTitle": "Related technologies",
+    "ctaTitle": "Interested in this service?",
+    "ctaSubtitle": "Tell me about your project and I'll get back to you shortly.",
+    "indexTitle": "Services",
+    "indexSubtitle": "End-to-end web and software development – from custom web applications and full-stack solutions to AI integration, databases, accessibility and consulting. Based in Poprad, serving all of Slovakia and remote.",
+    "indexMetaDescription": "Web development services by Dávid Kromka – custom web applications, full-stack solutions, AI integration, databases, WCAG accessibility and consulting. Based in Poprad, Slovakia; available remotely."
   },
   "companies": {
     "title": "Cooperations"

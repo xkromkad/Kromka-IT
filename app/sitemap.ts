@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { SITE_URL } from '@/lib/seo';
-import { getProjectSlugs } from '@/lib/data';
+import { getProjectSlugs, getServiceSlugs } from '@/lib/data';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = SITE_URL;
@@ -23,6 +23,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       alternates: { languages: { sk: `${base}/projects`, en: `${base}/en/projects` } },
     },
+    {
+      url: `${base}/services`,
+      lastModified: now,
+      alternates: { languages: { sk: `${base}/services`, en: `${base}/en/services` } },
+    },
   ];
 
   const projectRoutes: MetadataRoute.Sitemap = getProjectSlugs().map((slug) => ({
@@ -36,5 +41,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   }));
 
-  return [...staticRoutes, ...projectRoutes];
+  const serviceRoutes: MetadataRoute.Sitemap = getServiceSlugs().map((slug) => ({
+    url: `${base}/services/${slug}`,
+    lastModified: now,
+    alternates: {
+      languages: {
+        sk: `${base}/services/${slug}`,
+        en: `${base}/en/services/${slug}`,
+      },
+    },
+  }));
+
+  return [...staticRoutes, ...projectRoutes, ...serviceRoutes];
 }
