@@ -102,7 +102,18 @@
   "footer": {
     "madeWith": "Made with ❤️ in Slovakia",
     "privacyPolicy": "Ochrana osobných údajov",
-    "terms": "Podmienky používania"
+    "terms": "Podmienky používania",
+    "services": "Služby",
+    "projects": "Projekty",
+    "faq": "Časté otázky"
+  },
+  "faq": {
+    "title": "Časté otázky",
+    "description": "Odpovede na najčastejšie otázky o spolupráci s Dávidom Kromkom – služby, ceny, termíny, technológie, údržba, prístupnosť a práca na diaľku z Popradu.",
+    "subtitle": "Všetko, čo vás môže zaujímať, kým začneme spolupracovať. Nenašli ste odpoveď? Stačí sa ozvať.",
+    "backHome": "Späť na hlavnú stránku",
+    "ctaText": "Máte ešte otázku?",
+    "ctaLink": "Kontaktujte ma"
   },
   "privacy": {
     "title": "Ochrana osobných údajov",

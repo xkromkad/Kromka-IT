@@ -28,6 +28,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       alternates: { languages: { sk: `${base}/services`, en: `${base}/en/services` } },
     },
+    {
+      url: `${base}/faq`,
+      lastModified: now,
+      alternates: { languages: { sk: `${base}/faq`, en: `${base}/en/faq` } },
+    },
   ];
 
   const projectRoutes: MetadataRoute.Sitemap = getProjectSlugs().map((slug) => ({

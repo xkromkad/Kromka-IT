@@ -102,7 +102,18 @@
   "footer": {
     "madeWith": "Made with ❤️ in Slovakia",
     "privacyPolicy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "terms": "Terms of Service",
+    "services": "Services",
+    "projects": "Projects",
+    "faq": "FAQ"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Answers to common questions about working with Dávid Kromka – services, pricing, timelines, technologies, maintenance, accessibility and remote work from Poprad, Slovakia.",
+    "subtitle": "Everything you might want to know before we start working together. Didn't find your answer? Just get in touch.",
+    "backHome": "Back to homepage",
+    "ctaText": "Still have a question?",
+    "ctaLink": "Contact me"
   },
   "privacy": {
     "title": "Privacy Policy",

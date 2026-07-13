@@ -19,7 +19,16 @@ export default function Footer() {
           >
             david@kromka.it
           </a>
-          <div className="flex gap-4 mt-4 text-xs text-gray-500">
+          <div className="flex flex-wrap gap-x-4 gap-y-2 mt-4 text-xs text-gray-500">
+            <Link href="/services" className="hover:text-brand transition-colors">
+              {t('services')}
+            </Link>
+            <Link href="/projects" className="hover:text-brand transition-colors">
+              {t('projects')}
+            </Link>
+            <Link href="/faq" className="hover:text-brand transition-colors">
+              {t('faq')}
+            </Link>
             <Link href="/privacy-policy" className="hover:text-brand transition-colors">
               {t('privacyPolicy')}
             </Link>

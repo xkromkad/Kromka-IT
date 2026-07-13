@@ -1007,6 +1007,104 @@ export function getProjectBySlug(locale: Locale, slug: string): PortfolioItem | 
   return portfolioData[locale].find((p) => p.slug === slug);
 }
 
+export interface FaqItem {
+  question: Record<Locale, string>;
+  answer: Record<Locale, string>;
+}
+
+export const faqItems: FaqItem[] = [
+  {
+    question: {
+      sk: 'Aké služby ponúkate?',
+      en: 'What services do you offer?',
+    },
+    answer: {
+      sk: 'Venujem sa vývoju webových aplikácií na mieru, full-stack riešeniam (frontend aj backend), integrácii umelej inteligencie, návrhu a optimalizácii databáz, webovej prístupnosti podľa noriem WCAG a technickým konzultáciám a školeniam. Podrobnosti nájdete na stránke Služby.',
+      en: 'I focus on custom web application development, full-stack solutions (frontend and backend), AI integration, database design and optimisation, web accessibility to WCAG standards, and technical consulting and training. You can find the details on the Services page.',
+    },
+  },
+  {
+    question: {
+      sk: 'Koľko stojí web alebo webová aplikácia?',
+      en: 'How much does a website or web application cost?',
+    },
+    answer: {
+      sk: 'Cena vždy závisí od rozsahu a zložitosti projektu – jednoduchá prezentačná stránka je iná investícia než rozsiahla aplikácia s prihlasovaním, databázou a integráciami. Napíšte mi, o čo máte záujem, a po krátkej konzultácii vám pripravím nezáväznú cenovú ponuku.',
+      en: 'The price always depends on the scope and complexity of the project – a simple presentation site is a different investment than a large application with logins, a database and integrations. Tell me what you have in mind and, after a short consultation, I will prepare a non-binding quote.',
+    },
+  },
+  {
+    question: {
+      sk: 'Ako dlho trvá realizácia projektu?',
+      en: 'How long does a project take?',
+    },
+    answer: {
+      sk: 'Menšie stránky bývajú hotové v priebehu niekoľkých týždňov, väčšie aplikácie trvajú dlhšie podľa rozsahu. Po úvodnej analýze vašich požiadaviek vám viem dať konkrétny odhad termínu.',
+      en: 'Smaller sites are usually finished within a few weeks; larger applications take longer depending on scope. After an initial analysis of your requirements I can give you a concrete timeline estimate.',
+    },
+  },
+  {
+    question: {
+      sk: 'Pracujete na diaľku alebo len v Poprade?',
+      en: 'Do you work remotely or only in Poprad?',
+    },
+    answer: {
+      sk: 'Sídlim v Poprade, no pracujem pre klientov z celého Slovenska aj zo zahraničia. Väčšina spolupráce prebieha pohodlne na diaľku, osobné stretnutie v regióne Poprad je však tiež možné.',
+      en: 'I am based in Poprad, but I work with clients from all over Slovakia and abroad. Most collaboration runs comfortably online, though an in-person meeting in the Poprad region is also possible.',
+    },
+  },
+  {
+    question: {
+      sk: 'Aké technológie používate?',
+      en: 'What technologies do you use?',
+    },
+    answer: {
+      sk: 'Na backende pracujem najmä s ASP.NET Core, Blazor a .NET, na frontende s Next.js, React a Vue.js. K tomu databázy MS SQL Server, T-SQL a PostgreSQL. Technológiu vždy volím podľa toho, čo sa najlepšie hodí pre váš projekt.',
+      en: 'On the backend I mainly use ASP.NET Core, Blazor and .NET; on the frontend Next.js, React and Vue.js. Alongside that, MS SQL Server, T-SQL and PostgreSQL databases. I always choose the technology that best fits your project.',
+    },
+  },
+  {
+    question: {
+      sk: 'Poskytujete údržbu a podporu po spustení?',
+      en: 'Do you provide maintenance and support after launch?',
+    },
+    answer: {
+      sk: 'Áno. Po spustení sa viem postarať o údržbu, aktualizácie, opravy chýb aj ďalší rozvoj aplikácie. Podmienky podpory dohodneme podľa vašich potrieb.',
+      en: 'Yes. After launch I can take care of maintenance, updates, bug fixes and further development of the application. We agree on the support terms according to your needs.',
+    },
+  },
+  {
+    question: {
+      sk: 'Viete prevziať alebo doplniť existujúci projekt?',
+      en: 'Can you take over or extend an existing project?',
+    },
+    answer: {
+      sk: 'Áno. Viem prevziať rozpracovaný projekt, preveriť existujúci kód a databázu, opraviť problémy alebo doplniť nové funkcie – bez toho, aby ste museli všetko prepisovať od začiatku.',
+      en: 'Yes. I can take over an in-progress project, review the existing code and database, fix issues or add new features – without you having to rewrite everything from scratch.',
+    },
+  },
+  {
+    question: {
+      sk: 'Robíte weby prístupné podľa noriem WCAG?',
+      en: 'Do you make websites accessible to WCAG standards?',
+    },
+    answer: {
+      sk: 'Áno. Prístupnosť som testoval aj pre štátnu správu (Ministerstvo investícií, regionálneho rozvoja a informatizácie SR). Viem pripraviť audit prístupnosti alebo rovno upraviť web tak, aby ho mohol používať naozaj každý.',
+      en: 'Yes. I have tested accessibility for public administration too (the Ministry of Investments, Regional Development and Informatisation of the SR). I can prepare an accessibility audit or adapt the site directly so that it can genuinely be used by everyone.',
+    },
+  },
+  {
+    question: {
+      sk: 'V akom jazyku môžeme komunikovať?',
+      en: 'What languages can we communicate in?',
+    },
+    answer: {
+      sk: 'Bežne komunikujem v slovenčine a angličtine. Anglicky som prekladal aj vzdelávacie materiály, takže medzinárodná spolupráca nie je problém.',
+      en: 'I communicate regularly in Slovak and English. I have also translated educational materials into English, so international collaboration is no problem.',
+    },
+  },
+];
+
 /** Locale-agnostic list of service slugs. */
 export function getServiceSlugs(): string[] {
   return services.map((s) => s.slug);
