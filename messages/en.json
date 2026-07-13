@@ -52,7 +52,24 @@
   },
   "portfolio": {
     "title": "Portfolio",
-    "viewBtn": "View"
+    "viewBtn": "View",
+    "detailsBtn": "View details"
+  },
+  "projects": {
+    "indexTitle": "Projects",
+    "indexSubtitle": "A selection of web applications and projects I have designed and built – from AI-powered education tools to security labs.",
+    "indexMetaDescription": "Explore projects by Dávid Kromka – web applications, AI tools, and security labs built with Next.js, ASP.NET Core, and more.",
+    "backToProjects": "Back to projects",
+    "backHome": "Back to homepage",
+    "visitSite": "Visit site",
+    "sourceCode": "Source code",
+    "aboutTitle": "About the project",
+    "featuresTitle": "Highlights",
+    "techStackTitle": "Technologies",
+    "screenshotsTitle": "Screenshots",
+    "roleLabel": "Role",
+    "yearLabel": "Year",
+    "breadcrumbProjects": "Projects"
   },
   "contact": {
     "title": "Contact",

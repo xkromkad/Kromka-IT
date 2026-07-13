@@ -48,6 +48,23 @@
       "namedRegex": "^/(?<nxtPlocale>[^/]+?)/privacy\\-policy(?:/)?$"
     },
     {
+      "page": "/[locale]/projects",
+      "regex": "^/([^/]+?)/projects(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/projects(?:/)?$"
+    },
+    {
+      "page": "/[locale]/projects/[slug]",
+      "regex": "^/([^/]+?)/projects/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale",
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/projects/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
       "page": "/[locale]/terms",
       "regex": "^/([^/]+?)/terms(?:/)?$",
       "routeKeys": {

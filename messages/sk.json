@@ -52,7 +52,24 @@
   },
   "portfolio": {
     "title": "Portfólio",
-    "viewBtn": "Zobraziť"
+    "viewBtn": "Zobraziť",
+    "detailsBtn": "Zobraziť detail"
+  },
+  "projects": {
+    "indexTitle": "Projekty",
+    "indexSubtitle": "Výber webových aplikácií a projektov, ktoré som navrhol a vytvoril – od vzdelávacích nástrojov s umelou inteligenciou až po bezpečnostné laboratóriá.",
+    "indexMetaDescription": "Prezrite si projekty Dávida Kromku – webové aplikácie, nástroje s umelou inteligenciou a bezpečnostné laboratóriá vytvorené v Next.js, ASP.NET Core a ďalších technológiách.",
+    "backToProjects": "Späť na projekty",
+    "backHome": "Späť na hlavnú stránku",
+    "visitSite": "Navštíviť stránku",
+    "sourceCode": "Zdrojový kód",
+    "aboutTitle": "O projekte",
+    "featuresTitle": "Hlavné funkcie",
+    "techStackTitle": "Technológie",
+    "screenshotsTitle": "Ukážky",
+    "roleLabel": "Rola",
+    "yearLabel": "Rok",
+    "breadcrumbProjects": "Projekty"
   },
   "contact": {
     "title": "Kontakt",
