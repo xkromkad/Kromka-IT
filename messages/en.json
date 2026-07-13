@@ -76,11 +76,13 @@
   },
   "privacy": {
     "title": "Privacy Policy",
+    "description": "Privacy and cookie policy for kromka.it – how your data is handled under the GDPR, your rights, and the third-party services used on the site.",
     "lastUpdated": "Last updated: January 2025",
     "backHome": "Back to homepage"
   },
   "terms": {
     "title": "Terms of Service",
+    "description": "Terms of service for kromka.it – acceptance of terms, intellectual property, disclaimer of warranties, limitation of liability, and governing law.",
     "lastUpdated": "Last updated: January 2025",
     "backHome": "Back to homepage"
   },

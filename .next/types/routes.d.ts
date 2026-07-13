@@ -4,13 +4,14 @@
 type AppRoutes = "/[locale]" | "/[locale]/privacy-policy" | "/[locale]/terms"
 type PageRoutes = never
 type LayoutRoutes = "/" | "/[locale]"
-type RedirectRoutes = never
+type RedirectRoutes = "/[[...path]]"
 type RewriteRoutes = never
 type Routes = AppRoutes | PageRoutes | LayoutRoutes | RedirectRoutes | RewriteRoutes
 
 
 interface ParamMap {
   "/": {}
+  "/[[...path]]": { "path"?: string[]; }
   "/[locale]": { "locale": string; }
   "/[locale]/privacy-policy": { "locale": string; }
   "/[locale]/terms": { "locale": string; }

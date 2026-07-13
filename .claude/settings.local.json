@@ -19,7 +19,9 @@
       "WebFetch(domain:algorithmicschool.com)",
       "WebFetch(domain:www.mirri.gov.sk)",
       "WebFetch(domain:static.tildacdn.com)",
-      "WebFetch(domain:static.tildacdn.one)"
+      "WebFetch(domain:static.tildacdn.one)",
+      "Bash(curl -sS -L --max-time 20 \"https://kromka.it/robots.txt\")",
+      "Bash(curl -sS -L --max-time 20 \"https://kromka.it/sitemap.xml\")"
     ]
   }
 }

@@ -1,3 +1,8 @@
 {
-  "/[locale]/page": "app/[locale]/page.js"
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/[locale]/page": "app/[locale]/page.js",
+  "/[locale]/privacy-policy/page": "app/[locale]/privacy-policy/page.js",
+  "/[locale]/terms/page": "app/[locale]/terms/page.js"
 }

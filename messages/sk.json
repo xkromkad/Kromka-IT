@@ -76,11 +76,13 @@
   },
   "privacy": {
     "title": "Ochrana osobných údajov",
+    "description": "Zásady ochrany osobných údajov a používania cookies na stránke kromka.it – v súlade s GDPR, vrátane vašich práv a služieb tretích strán.",
     "lastUpdated": "Posledná aktualizácia: január 2025",
     "backHome": "Späť na hlavnú stránku"
   },
   "terms": {
     "title": "Podmienky používania",
+    "description": "Podmienky používania webovej stránky kromka.it – prijatie podmienok, duševné vlastníctvo, vylúčenie záruk, obmedzenie zodpovednosti a rozhodné právo.",
     "lastUpdated": "Posledná aktualizácia: január 2025",
     "backHome": "Späť na hlavnú stránku"
   },

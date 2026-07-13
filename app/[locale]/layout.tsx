@@ -5,6 +5,7 @@ import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CookieBanner from '@/components/CookieBanner';
+import { SITE_URL, buildAlternates } from '@/lib/seo';
 
 const locales = ['sk', 'en'];
 
@@ -20,13 +21,12 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'meta' });
 
-  const base = 'https://kromka.it';
-  const canonical = locale === 'sk' ? base : `${base}/${locale}`;
+  const canonical = locale === 'en' ? `${SITE_URL}/en` : SITE_URL;
 
   return {
     title: t('title'),
     description: t('description'),
-    metadataBase: new URL(base),
+    metadataBase: new URL(SITE_URL),
     openGraph: {
       title: t('ogTitle'),
       description: t('description'),
@@ -39,10 +39,7 @@ export async function generateMetadata({
       title: t('ogTitle'),
       description: t('description'),
     },
-    alternates: {
-      canonical,
-      languages: { sk: base, en: `${base}/en` },
-    },
+    alternates: buildAlternates(locale, ''),
     icons: {
       icon: [
         { url: '/icons/favicon-32x32.png', sizes: '32x32', type: 'image/png' },

@@ -2,6 +2,7 @@ import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
 import { Link } from '@/navigation';
+import { buildAlternates } from '@/lib/seo';
 
 export async function generateMetadata({
   params,
@@ -10,7 +11,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'privacy' });
-  return { title: `${t('title')} | Kromka IT` };
+  return {
+    title: `${t('title')} | Kromka IT`,
+    description: t('description'),
+    alternates: buildAlternates(locale, '/privacy-policy'),
+    openGraph: { title: `${t('title')} | Kromka IT`, description: t('description') },
+  };
 }
 
 export default async function PrivacyPolicyPage({
