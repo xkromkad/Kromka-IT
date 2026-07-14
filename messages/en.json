@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Kromka IT | Dávid Kromka – Web Developer",
-    "description": "Full-stack web developer experienced in ASP.NET Core, Blazor, SQL, and Vue.js. Delivering international projects and always learning.",
-    "ogTitle": "Dávid Kromka – Full-Stack Developer"
+    "title": "Web Development in Poprad, Slovakia | Kromka IT",
+    "description": "Custom websites and web applications built by full-stack developer Dávid Kromka. Based in Poprad, Slovakia – serving clients across Slovakia and remotely, from design to deployment.",
+    "ogTitle": "Dávid Kromka – Web Development, Poprad, Slovakia"
   },
   "nav": {
     "home": "Kromka IT",
@@ -15,6 +15,8 @@
   },
   "hero": {
     "role": "Web Development",
+    "tagline": "Websites & web applications · Poprad, Slovakia",
+    "location": "Based in Poprad, I build websites and web applications for clients across Slovakia and remotely.",
     "name": "Dávid Kromka",
     "descPart1": "I specialize in developing modern",
     "descBold1": "web applications",
@@ -105,7 +107,8 @@
     "terms": "Terms of Service",
     "services": "Services",
     "projects": "Projects",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "webPoprad": "Web development Poprad"
   },
   "faq": {
     "title": "Frequently Asked Questions",
@@ -132,5 +135,21 @@
     "learnMore": "Learn more",
     "accept": "Accept all",
     "decline": "Decline"
+  },
+  "localPoprad": {
+    "metaTitle": "Web Development in Poprad – custom websites & apps | Kromka IT",
+    "metaDescription": "Looking for web development in Poprad? I build custom websites and web applications – modern, fast and reliable, from design to deployment. Dávid Kromka, Poprad, Slovakia.",
+    "backHome": "Back to homepage",
+    "title": "Web Development in Poprad",
+    "intro": "I build modern, custom websites and web applications for companies, sole traders and individuals in Poprad and the surrounding region. Whether you need a presentation site, an e-shop, a booking system or a larger web application, I take care of the whole project – from design and development to launch and maintenance.\n\nI am based right in Poprad, so we can meet in person, and I work just as well remotely with clients across Slovakia.",
+    "benefitsTitle": "What you get",
+    "benefit1": "A website tailored to your needs, not a generic template",
+    "benefit2": "Fast, modern, clear pages on mobile and desktop",
+    "benefit3": "A personal approach and direct communication with a developer in Poprad",
+    "benefit4": "Complete care – from design to deployment and maintenance",
+    "whyTitle": "Why me",
+    "why": "I am a full-stack developer with a master's degree from FIIT STU and experience on both domestic and international projects. I build websites on modern technologies such as Next.js, React and ASP.NET Core, with an emphasis on performance, security and accessibility.",
+    "ctaTitle": "Interested in a website or app?",
+    "ctaSubtitle": "Tell me a few words about your project and I'll get back to you with a proposed solution."
   }
 }

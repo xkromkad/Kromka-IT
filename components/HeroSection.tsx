@@ -21,7 +21,9 @@ export default function HeroSection({ locale: _locale }: { locale: Locale }) {
               <h1 className="text-5xl md:text-6xl font-poppins font-bold text-dark leading-tight tracking-tight">
                 {t('name')}
               </h1>
-              <p className="text-lg font-poppins text-gray-400 font-medium mt-2">{t('role')}</p>
+              <p className="text-lg md:text-xl font-poppins text-dark font-semibold mt-3">
+                {t('tagline')}
+              </p>
 
               <div className="w-16 h-1.5 bg-brand rounded-full mt-5 mb-7 mx-auto md:mx-0" />
 
@@ -40,6 +42,10 @@ export default function HeroSection({ locale: _locale }: { locale: Locale }) {
                   {t('descUniversity')}
                 </a>{' '}
                 {t('descPart4')}
+              </p>
+
+              <p className="text-gray-500 leading-relaxed max-w-xl text-[15px] mt-4 font-medium">
+                {t('location')}
               </p>
 
               <div className="flex gap-3 mt-9 flex-wrap justify-center md:justify-start">

@@ -33,6 +33,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       alternates: { languages: { sk: `${base}/faq`, en: `${base}/en/faq` } },
     },
+    {
+      url: `${base}/tvorba-webovych-stranok-poprad`,
+      lastModified: now,
+      alternates: {
+        languages: {
+          sk: `${base}/tvorba-webovych-stranok-poprad`,
+          en: `${base}/en/tvorba-webovych-stranok-poprad`,
+        },
+      },
+    },
   ];
 
   const projectRoutes: MetadataRoute.Sitemap = getProjectSlugs().map((slug) => ({

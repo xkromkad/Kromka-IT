@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Kromka IT | Dávid Kromka – Vývoj webových aplikácií",
-    "description": "Webový vývojár so skúsenosťami v ASP.NET Core, Blazor, SQL a Vue.js. Pracujem na medzinárodných projektoch a neustále sa vzdelávam.",
-    "ogTitle": "Dávid Kromka – Full-Stack Developer"
+    "title": "Tvorba webových stránok a aplikácií Poprad | Kromka IT",
+    "description": "Tvorba webových stránok a webových aplikácií na mieru v Poprade. Full-stack vývojár Dávid Kromka – od návrhu po nasadenie, pre klientov z celého Slovenska aj na diaľku.",
+    "ogTitle": "Dávid Kromka – Tvorba webových stránok a aplikácií, Poprad"
   },
   "nav": {
     "home": "Kromka IT",
@@ -15,6 +15,8 @@
   },
   "hero": {
     "role": "Web Development",
+    "tagline": "Tvorba webových stránok a aplikácií · Poprad",
+    "location": "Sídlim v Poprade a tvorím webové stránky a aplikácie pre klientov z celého Slovenska aj na diaľku.",
     "name": "Dávid Kromka",
     "descPart1": "Špecializujem sa na vývoj moderných",
     "descBold1": "webových aplikácií",
@@ -105,7 +107,8 @@
     "terms": "Podmienky používania",
     "services": "Služby",
     "projects": "Projekty",
-    "faq": "Časté otázky"
+    "faq": "Časté otázky",
+    "webPoprad": "Tvorba webstránok Poprad"
   },
   "faq": {
     "title": "Časté otázky",
@@ -132,5 +135,21 @@
     "learnMore": "Viac informácií",
     "accept": "Prijať všetky",
     "decline": "Odmietnuť"
+  },
+  "localPoprad": {
+    "metaTitle": "Tvorba webových stránok Poprad – weby a aplikácie na mieru | Kromka IT",
+    "metaDescription": "Hľadáte tvorbu webových stránok v Poprade? Vytvorím vám web alebo webovú aplikáciu na mieru – moderné, rýchle a prehľadné riešenie od návrhu po nasadenie. Dávid Kromka, Poprad.",
+    "backHome": "Späť na hlavnú stránku",
+    "title": "Tvorba webových stránok a aplikácií v Poprade",
+    "intro": "Vytváram moderné webové stránky a webové aplikácie na mieru pre firmy, živnostníkov aj jednotlivcov v Poprade a okolí. Či potrebujete prezentačný web, e-shop, rezervačný systém alebo rozsiahlejšiu webovú aplikáciu, postarám sa o celý projekt – od návrhu cez programovanie až po spustenie a údržbu.\n\nSídlim priamo v Poprade, takže sa vieme stretnúť aj osobne, no rovnako dobre spolupracujem na diaľku s klientmi z celého Slovenska.",
+    "benefitsTitle": "Čo získate",
+    "benefit1": "Web na mieru vašim potrebám, nie generická šablóna",
+    "benefit2": "Rýchle, moderné a prehľadné stránky na mobile aj počítači",
+    "benefit3": "Osobný prístup a komunikácia priamo s vývojárom v Poprade",
+    "benefit4": "Kompletná starostlivosť – od návrhu po nasadenie a údržbu",
+    "whyTitle": "Prečo ja",
+    "why": "Som full-stack vývojár s inžinierskym titulom z FIIT STU a praxou na domácich aj medzinárodných projektoch. Weby staviam na moderných technológiách ako Next.js, React a ASP.NET Core, s dôrazom na výkon, bezpečnosť a prístupnosť.",
+    "ctaTitle": "Máte záujem o web alebo aplikáciu?",
+    "ctaSubtitle": "Napíšte mi pár slov o vašom projekte a ozvem sa vám s návrhom riešenia."
   }
 }

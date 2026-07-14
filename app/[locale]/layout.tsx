@@ -53,42 +53,79 @@ export async function generateMetadata({
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Dávid Kromka',
-  jobTitle: 'Full-Stack Web Developer',
-  url: 'https://kromka.it',
-  email: 'david@kromka.it',
-  image: 'https://kromka.it/images/david.png',
-  description:
-    'Full-stack developer based in Poprad, Slovakia. Specialising in ASP.NET Core, Blazor, WinUI 3 and MS SQL. Available for commercial projects across Slovakia and remotely.',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Poprad',
-    addressRegion: 'Prešovský kraj',
-    addressCountry: 'SK',
-  },
-  areaServed: [
-    { '@type': 'Country', name: 'Slovensko' },
-    'Remote',
-  ],
-  worksFor: {
-    '@type': 'Organization',
-    name: 'SEN Systems',
-    url: 'https://sensystems.sk',
-  },
-  alumniOf: {
-    '@type': 'CollegeOrUniversity',
-    name: 'Faculty of Informatics and Information Technologies STU',
-    url: 'https://www.fiit.stuba.sk',
-  },
-  knowsAbout: [
-    'Blazor', 'ASP.NET Core', 'WinUI 3', 'MS SQL', 'Vue.js',
-    'TypeScript', 'Full-Stack Development', 'Web Accessibility',
-  ],
-  sameAs: [
-    'https://www.linkedin.com/in/d%C3%A1vid-kromka-497978217',
-    'https://github.com/xkromkad',
-    'https://www.instagram.com/davidkromka/',
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': 'https://kromka.it/#person',
+      name: 'Dávid Kromka',
+      jobTitle: 'Full-Stack Web Developer',
+      url: 'https://kromka.it',
+      email: 'david@kromka.it',
+      image: 'https://kromka.it/images/david.png',
+      description:
+        'Full-stack developer based in Poprad, Slovakia. Specialising in ASP.NET Core, Blazor, WinUI 3 and MS SQL. Available for commercial projects across Slovakia and remotely.',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Poprad',
+        addressRegion: 'Prešovský kraj',
+        addressCountry: 'SK',
+      },
+      worksFor: {
+        '@type': 'Organization',
+        name: 'SEN Systems',
+        url: 'https://sensystems.sk',
+      },
+      alumniOf: {
+        '@type': 'CollegeOrUniversity',
+        name: 'Faculty of Informatics and Information Technologies STU',
+        url: 'https://www.fiit.stuba.sk',
+      },
+      knowsAbout: [
+        'Blazor', 'ASP.NET Core', 'WinUI 3', 'MS SQL', 'Vue.js',
+        'TypeScript', 'Full-Stack Development', 'Web Accessibility',
+      ],
+      sameAs: [
+        'https://www.linkedin.com/in/d%C3%A1vid-kromka-497978217',
+        'https://github.com/xkromkad',
+        'https://www.instagram.com/davidkromka/',
+      ],
+    },
+    {
+      '@type': 'ProfessionalService',
+      '@id': 'https://kromka.it/#business',
+      name: 'Kromka IT – Dávid Kromka',
+      description:
+        'Tvorba webových stránok a webových aplikácií na mieru v Poprade. Full-stack vývoj od návrhu po nasadenie pre klientov z celého Slovenska aj na diaľku.',
+      url: 'https://kromka.it',
+      image: 'https://kromka.it/images/david.png',
+      email: 'david@kromka.it',
+      priceRange: '€€',
+      founder: { '@id': 'https://kromka.it/#person' },
+      provider: { '@id': 'https://kromka.it/#person' },
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Nám. sv. Egídia 11/25',
+        addressLocality: 'Poprad',
+        postalCode: '058 01',
+        addressRegion: 'Prešovský kraj',
+        addressCountry: 'SK',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 49.0559,
+        longitude: 20.2976,
+      },
+      areaServed: [
+        { '@type': 'City', name: 'Poprad' },
+        { '@type': 'Country', name: 'Slovensko' },
+      ],
+      knowsLanguage: ['sk', 'en'],
+      sameAs: [
+        'https://www.linkedin.com/in/d%C3%A1vid-kromka-497978217',
+        'https://github.com/xkromkad',
+        'https://www.instagram.com/davidkromka/',
+      ],
+    },
   ],
 };
 

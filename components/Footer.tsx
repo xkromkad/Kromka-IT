@@ -29,6 +29,9 @@ export default function Footer() {
             <Link href="/faq" className="hover:text-brand transition-colors">
               {t('faq')}
             </Link>
+            <Link href="/tvorba-webovych-stranok-poprad" className="hover:text-brand transition-colors">
+              {t('webPoprad')}
+            </Link>
             <Link href="/privacy-policy" className="hover:text-brand transition-colors">
               {t('privacyPolicy')}
             </Link>
