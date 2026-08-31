@@ -2,7 +2,8 @@
 .next/
 out/
 
-# Dependencies
+# Dependenciesge
+
 node_modules/
 
 # Environment variables
