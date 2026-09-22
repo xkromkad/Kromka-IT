@@ -715,11 +715,11 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
       tags: ['Vzdelávanie', 'Umelá inteligencia', 'Učenie hrou'],
       projectUrl: 'https://pexeso.predskolacik.app/',
       image: '/images/pexesolab.jpg',
-      imageAlt: 'Screenshot generátora Pexesolab – tvorba pamäťovej hry z vlastných fotografií',
+      imageAlt: 'PexesoLab – rozohraté pexeso s dvomi nájdenými dvojicami kartičiek',
       screenshots: [
         {
           src: '/images/pexesolab.jpg',
-          alt: 'Vygenerovaná pamäťová hra pexeso v aplikácii Pexesolab',
+          alt: 'Kartičky pexesa z aplikácie PexesoLab, dve dvojice otočené lícom nahor',
         },
       ],
     },
@@ -983,11 +983,11 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
       tags: ['Education', 'Artificial Intelligence', 'Learning Through Play'],
       projectUrl: 'https://pexeso.predskolacik.app/',
       image: '/images/pexesolab.jpg',
-      imageAlt: 'Screenshot of Pexesolab – custom memory card game generator from uploaded images',
+      imageAlt: 'PexesoLab – a memory game in progress with two matched pairs of cards',
       screenshots: [
         {
           src: '/images/pexesolab.jpg',
-          alt: 'A generated memory card game in the Pexesolab app',
+          alt: 'PexesoLab memory cards, two pairs turned face up',
         },
       ],
     },
