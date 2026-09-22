@@ -306,8 +306,12 @@ export interface Screenshot {
   alt: string;
 }
 
+/** Project groupings on the projects page. Uncategorised projects are listed after them. */
+export type ProjectCategory = 'education';
+
 export interface PortfolioItem {
   slug: string;
+  category?: ProjectCategory;
   title: string;
   type: string;
   description: string;
@@ -662,6 +666,7 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
     },
     {
       slug: 'predskolacik',
+      category: 'education',
       title: 'Predškoláčik',
       type: 'Web',
       description:
@@ -691,6 +696,7 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
     },
     {
       slug: 'pexesolab',
+      category: 'education',
       title: 'Pexesolab',
       type: 'Web',
       description:
@@ -714,6 +720,66 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
         {
           src: '/images/pexesolab.jpg',
           alt: 'Vygenerovaná pamäťová hra pexeso v aplikácii Pexesolab',
+        },
+      ],
+    },
+    {
+      slug: 'dominolab',
+      category: 'education',
+      title: 'DominoLab',
+      type: 'Web',
+      description:
+        'Generátor domina na tlač aj hra v prehliadači. Kocky s bodkami, číslami, farbami, tvarmi alebo vlastnými obrázkami, hotové PDF na A4 za pár sekúnd – zadarmo a bez registrácie.',
+      longDescription:
+        'DominoLab je bezplatný nástroj, s ktorým si rodičia a učiteľky pripravia domino presne pre svoje deti: s bodkami, číslami, farbami, tvarmi alebo vlastnými obrázkami. Obrázkové domino vytvorí z nahratých fotiek všetky dvojice automaticky a režim počítania spája obrázok s počtom bodiek.\n\nHotové kocky sa stiahnu ako PDF na A4 s vodítkami na strihanie a slovenskou diakritikou, alebo sa dá domino hrať priamo v prehliadači proti počítaču či vo dvojici. Všetko prebieha vo vašom prehliadači – nahraté obrázky sa nikam neodosielajú.',
+      features: [
+        'Domino s bodkami, číslami, farbami, tvarmi aj vlastnými obrázkami',
+        'Klasické sady až po dvojitú deväťku, nastaviteľná veľkosť kociek',
+        'PDF na A4 s vodítkami na strihanie a správnou diakritikou',
+        'Hra online proti počítaču alebo vo dvojici na jednom zariadení',
+        'Obrázky sa spracúvajú len v prehliadači, nikam sa neodosielajú',
+      ],
+      techStack: ['Next.js', 'React', 'TypeScript', 'jsPDF', 'Tailwind CSS'],
+      role: 'Samostatný vývojár',
+      year: '2026',
+      tags: ['Vzdelávanie', 'Učenie hrou', 'PDF na tlač'],
+      projectUrl: 'https://domino.predskolacik.app/',
+      image: '/images/dominolab.png',
+      imageAlt: 'DominoLab – náhľad strany A4 s farebnými kockami domina na tlač',
+      screenshots: [
+        {
+          src: '/images/dominolab.png',
+          alt: 'Strana A4 s farebným domínom vygenerovaná v aplikácii DominoLab',
+        },
+      ],
+    },
+    {
+      slug: 'linklab',
+      category: 'education',
+      title: 'LinkLab',
+      type: 'Web',
+      description:
+        'Pracovné listy pre predškolákov na spájanie dvojíc, triedenie do skupín a vystrihovanie. Hotové témy, knižnica vyše 800 obrázkov s vyhľadávaním po slovensky a PDF na jednu stranu A4.',
+      longDescription:
+        'LinkLab vytvára pracovné listy, na ktorých deti spájajú čiarou dvojice, ktoré patria k sebe – kuchára s panvicou, hasiča s ohňom – alebo triedia obrázky do skupín, napríklad ovocie a zeleninu. Pre deti, ktoré ešte nevedia viesť čiaru, je k dispozícii režim vystrihni a nalep.\n\nObsah pochádza z hotových dvojjazyčných tém, z generátorov farieb, tvarov, počítania a prvých písmen, alebo z vlastných obrázkov. Zabudovaná knižnica viac ako 800 obrázkov OpenMoji sa dá prehľadávať po slovensky aj po anglicky. Každý list sa zmestí na jednu stranu A4 a môže mať aj stranu s riešením; tú istú úlohu si deti zahrajú aj online.',
+      features: [
+        'Spájanie dvojíc, triedenie do skupín a režim vystrihni a nalep',
+        'Hotové témy: povolania, zvieratá, protiklady, počasie a oblečenie',
+        'Knižnica 800+ obrázkov s vyhľadávaním po slovensky aj po anglicky',
+        'Vždy jedna strana A4, voliteľne so stranou s riešením',
+        'Hra online s tými istými úlohami, aj s vlastnými obrázkami',
+      ],
+      techStack: ['Next.js', 'React', 'TypeScript', 'jsPDF', 'OpenMoji', 'Unicode CLDR', 'Tailwind CSS'],
+      role: 'Samostatný vývojár',
+      year: '2026',
+      tags: ['Vzdelávanie', 'Učenie hrou', 'PDF na tlač'],
+      projectUrl: 'https://link.predskolacik.app/',
+      image: '/images/linklab.png',
+      imageAlt: 'LinkLab – pracovný list na spájanie povolaní s ich vecami, so zakreslenými spojeniami',
+      screenshots: [
+        {
+          src: '/images/linklab.png',
+          alt: 'Pracovný list „Povolania a ich veci“ vytvorený v aplikácii LinkLab',
         },
       ],
     },
@@ -868,6 +934,7 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
     },
     {
       slug: 'predskolacik',
+      category: 'education',
       title: 'Predškoláčik',
       type: 'Web',
       description:
@@ -897,6 +964,7 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
     },
     {
       slug: 'pexesolab',
+      category: 'education',
       title: 'Pexesolab',
       type: 'Web',
       description:
@@ -920,6 +988,66 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
         {
           src: '/images/pexesolab.jpg',
           alt: 'A generated memory card game in the Pexesolab app',
+        },
+      ],
+    },
+    {
+      slug: 'dominolab',
+      category: 'education',
+      title: 'DominoLab',
+      type: 'Web',
+      description:
+        'A printable domino generator and an in-browser game. Tiles with dots, numbers, colours, shapes or your own pictures, and an A4 PDF in seconds – free, no registration.',
+      longDescription:
+        'DominoLab is a free tool that lets parents and teachers make a domino set for their own children: with dots, numbers, colours, shapes or their own pictures. Picture domino builds every pair from the uploaded photos automatically, and counting mode pairs a picture with a number of dots.\n\nThe finished tiles download as an A4 PDF with cutting guides and correct Slovak accents, or the game can be played right in the browser against the computer or with two players on one device. Everything runs in the browser – uploaded images are never sent anywhere.',
+      features: [
+        'Domino with dots, numbers, colours, shapes or your own pictures',
+        'Classic sets up to double-nine, adjustable tile size',
+        'A4 PDF with cutting guides and correct diacritics',
+        'Play online against the computer or with two players on one device',
+        'Images are processed in the browser only and never uploaded',
+      ],
+      techStack: ['Next.js', 'React', 'TypeScript', 'jsPDF', 'Tailwind CSS'],
+      role: 'Solo developer',
+      year: '2026',
+      tags: ['Education', 'Learning Through Play', 'Printable PDF'],
+      projectUrl: 'https://domino.predskolacik.app/',
+      image: '/images/dominolab.png',
+      imageAlt: 'DominoLab – preview of an A4 page of colourful printable domino tiles',
+      screenshots: [
+        {
+          src: '/images/dominolab.png',
+          alt: 'An A4 page of colour domino generated in DominoLab',
+        },
+      ],
+    },
+    {
+      slug: 'linklab',
+      category: 'education',
+      title: 'LinkLab',
+      type: 'Web',
+      description:
+        'Worksheets for preschoolers: join matching pairs, sort pictures into groups, or cut and glue. Ready-made themes, a library of 800+ pictures searchable in Slovak and English, and a one-page A4 PDF.',
+      longDescription:
+        'LinkLab makes worksheets where children draw a line between things that belong together – a cook and a pan, a firefighter and fire – or sort pictures into groups such as fruit and vegetables. For children who cannot steer a line yet, there is a cut-and-glue mode.\n\nContent comes from ready-made bilingual themes, from generators for colours, shapes, counting and first letters, or from your own pictures. A built-in library of more than 800 OpenMoji pictures is searchable in both Slovak and English. Every sheet fits on a single A4 page and can come with an answer-key page, and the same task can be played online.',
+      features: [
+        'Matching pairs, sorting into groups and a cut-and-glue mode',
+        'Ready-made themes: jobs, animals, opposites, weather and clothes',
+        'A library of 800+ pictures searchable in Slovak and English',
+        'Always one A4 page, with an optional answer key',
+        'An online game with the same tasks, including your own pictures',
+      ],
+      techStack: ['Next.js', 'React', 'TypeScript', 'jsPDF', 'OpenMoji', 'Unicode CLDR', 'Tailwind CSS'],
+      role: 'Solo developer',
+      year: '2026',
+      tags: ['Education', 'Learning Through Play', 'Printable PDF'],
+      projectUrl: 'https://link.predskolacik.app/',
+      image: '/images/linklab.png',
+      imageAlt: 'LinkLab – a worksheet matching jobs to their things, with the links drawn in',
+      screenshots: [
+        {
+          src: '/images/linklab.png',
+          alt: 'The "Jobs and their things" worksheet created in LinkLab',
         },
       ],
     },
@@ -1042,6 +1170,50 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
     },
   ],
 };
+
+export interface ProjectCategoryInfo {
+  title: string;
+  description: string;
+}
+
+/** Display order of the categories; uncategorised projects follow them. */
+export const PROJECT_CATEGORY_ORDER: ProjectCategory[] = ['education'];
+
+export const projectCategories: Record<Locale, Record<ProjectCategory, ProjectCategoryInfo>> = {
+  sk: {
+    education: {
+      title: 'Vzdelávanie',
+      description:
+        'Nástroje pre deti v predškolskom veku, ich rodičov a učiteľky – učenie hrou, pracovné listy a hry na tlač aj online.',
+    },
+  },
+  en: {
+    education: {
+      title: 'Education',
+      description:
+        'Tools for preschool children, their parents and teachers – learning through play, worksheets and games to print or play online.',
+    },
+  },
+};
+
+export interface ProjectGroup {
+  /** null for the trailing group of uncategorised projects. */
+  category: ProjectCategory | null;
+  info?: ProjectCategoryInfo;
+  items: PortfolioItem[];
+}
+
+/** Projects grouped by category in PROJECT_CATEGORY_ORDER, keeping data order within each group. */
+export function groupProjects(locale: Locale): ProjectGroup[] {
+  const items = portfolioData[locale];
+  const groups: ProjectGroup[] = PROJECT_CATEGORY_ORDER.map((category) => ({
+    category,
+    info: projectCategories[locale][category],
+    items: items.filter((p) => p.category === category),
+  })).filter((g) => g.items.length > 0);
+  const rest = items.filter((p) => !p.category);
+  return rest.length ? [...groups, { category: null, items: rest }] : groups;
+}
 
 /** Locale-agnostic list of project slugs (Slovak array is the canonical source). */
 export function getProjectSlugs(): string[] {

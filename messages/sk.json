@@ -68,7 +68,8 @@
   "portfolio": {
     "title": "Portfólio",
     "viewBtn": "Zobraziť",
-    "detailsBtn": "Zobraziť detail"
+    "detailsBtn": "Zobraziť detail",
+    "otherProjects": "Ďalšie projekty"
   },
   "projects": {
     "indexTitle": "Projekty",
@@ -84,7 +85,8 @@
     "screenshotsTitle": "Ukážky",
     "roleLabel": "Rola",
     "yearLabel": "Rok",
-    "breadcrumbProjects": "Projekty"
+    "breadcrumbProjects": "Projekty",
+    "otherProjects": "Ďalšie projekty"
   },
   "contact": {
     "title": "Kontakt",

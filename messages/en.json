@@ -68,7 +68,8 @@
   "portfolio": {
     "title": "Portfolio",
     "viewBtn": "View",
-    "detailsBtn": "View details"
+    "detailsBtn": "View details",
+    "otherProjects": "Other projects"
   },
   "projects": {
     "indexTitle": "Projects",
@@ -84,7 +85,8 @@
     "screenshotsTitle": "Screenshots",
     "roleLabel": "Role",
     "yearLabel": "Year",
-    "breadcrumbProjects": "Projects"
+    "breadcrumbProjects": "Projects",
+    "otherProjects": "Other projects"
   },
   "contact": {
     "title": "Contact",

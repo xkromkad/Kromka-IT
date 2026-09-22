@@ -1,12 +1,12 @@
 import { useTranslations } from 'next-intl';
 import type { Locale } from '@/lib/data';
-import { portfolioData } from '@/lib/data';
-import ProjectCard from './ProjectCard';
+import { groupProjects } from '@/lib/data';
+import ProjectGroups from './ProjectGroups';
 import VideoPlayer from './VideoPlayer';
 
 export default function PortfolioSection({ locale }: { locale: Locale }) {
   const t = useTranslations('portfolio');
-  const items = portfolioData[locale];
+  const groups = groupProjects(locale);
 
   return (
     <div className="max-w-6xl mx-auto">
@@ -17,12 +17,8 @@ export default function PortfolioSection({ locale }: { locale: Locale }) {
         <VideoPlayer src="/videos/laptop.webm" className="w-12 h-auto" loop />
       </div>
 
-      {/* Card grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {items.map((item) => (
-          <ProjectCard key={item.slug} item={item} />
-        ))}
-      </div>
+      {/* Cards, grouped by category */}
+      <ProjectGroups groups={groups} otherTitle={t('otherProjects')} headingLevel="h3" />
     </div>
   );
 }

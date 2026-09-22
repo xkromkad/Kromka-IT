@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/navigation';
 import type { Locale } from '@/lib/data';
-import { portfolioData } from '@/lib/data';
+import { groupProjects } from '@/lib/data';
 import { SITE_URL, buildAlternates } from '@/lib/seo';
-import ProjectCard from '@/components/ProjectCard';
+import ProjectGroups from '@/components/ProjectGroups';
 
 export async function generateMetadata({
   params,
@@ -32,7 +32,7 @@ export default async function ProjectsIndexPage({
   setRequestLocale(locale);
 
   const t = await getTranslations('projects');
-  const items = portfolioData[locale as Locale];
+  const groups = groupProjects(locale as Locale);
 
   const homeUrl = locale === 'en' ? `${SITE_URL}/en` : SITE_URL;
   const projectsUrl = locale === 'en' ? `${SITE_URL}/en/projects` : `${SITE_URL}/projects`;
@@ -74,11 +74,7 @@ export default async function ProjectsIndexPage({
         <p className="text-gray-500 leading-relaxed">{t('indexSubtitle')}</p>
       </header>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {items.map((item) => (
-          <ProjectCard key={item.slug} item={item} />
-        ))}
-      </div>
+      <ProjectGroups groups={groups} otherTitle={t('otherProjects')} headingLevel="h2" />
     </div>
   );
 }
