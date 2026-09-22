@@ -306,12 +306,16 @@ export interface Screenshot {
   alt: string;
 }
 
-/** Project groupings on the projects page. Uncategorised projects are listed after them. */
-export type ProjectCategory = 'education';
+/** Project groupings on the projects page. */
+export type ProjectCategory = 'education' | 'science' | 'community';
+
+/** A set of related apps shown together as one panel within their category. */
+export type ProjectFamily = 'predskolacik';
 
 export interface PortfolioItem {
   slug: string;
-  category?: ProjectCategory;
+  category: ProjectCategory;
+  family?: ProjectFamily;
   title: string;
   type: string;
   description: string;
@@ -637,6 +641,7 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
   sk: [
     {
       slug: 'track-my-bunny',
+      category: 'community',
       title: 'Track My Bunny',
       type: 'Web',
       description:
@@ -667,6 +672,7 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
     {
       slug: 'predskolacik',
       category: 'education',
+      family: 'predskolacik',
       title: 'Predškoláčik',
       type: 'Web',
       description:
@@ -684,10 +690,13 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
       year: '2025',
       tags: ['Vzdelávanie', 'Umelá inteligencia', 'Učenie hrou'],
       projectUrl: 'https://predskolacik.app/',
-      image: '/images/predskolacik.jpg',
-      imageAlt:
-        'Screenshot aplikácie Predškoláčik – interaktívne vzdelávacie úlohy pre predškolské deti',
+      image: '/images/predskolacik-card.png',
+      imageAlt: 'Predškoláčik – úloha na počítanie jabĺk so zajačikom Bali a hviezdičkami za odmenu',
       screenshots: [
+        {
+          src: '/images/predskolacik-card.png',
+          alt: 'Úloha „Koľko jabĺk vidíš?“ v aplikácii Predškoláčik so správnou odpoveďou 5',
+        },
         {
           src: '/images/predskolacik.jpg',
           alt: 'Interaktívna vzdelávacia úloha v aplikácii Predškoláčik',
@@ -697,6 +706,7 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
     {
       slug: 'pexesolab',
       category: 'education',
+      family: 'predskolacik',
       title: 'Pexesolab',
       type: 'Web',
       description:
@@ -726,6 +736,7 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
     {
       slug: 'dominolab',
       category: 'education',
+      family: 'predskolacik',
       title: 'DominoLab',
       type: 'Web',
       description:
@@ -756,6 +767,7 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
     {
       slug: 'linklab',
       category: 'education',
+      family: 'predskolacik',
       title: 'LinkLab',
       type: 'Web',
       description:
@@ -785,6 +797,7 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
     },
     {
       slug: 'sql-injection-lab',
+      category: 'education',
       title: 'SQL Injection Lab',
       type: 'Web',
       description:
@@ -803,10 +816,14 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
       tags: ['SQL Injection', 'Informačná bezpečnosť', 'Vzdelávanie'],
       projectUrl: 'https://sqlinjectionlab.kromka.it/',
       githubUrl: 'https://github.com/xkromkad/SQLInjectionLab',
-      image: '/images/sqlinjection.png',
+      image: '/images/sqlinjectionlab.png',
       imageAlt:
-        'Screenshot SQL Injection Lab – cvičné prostredie na trénovanie bezpečnostných zručností',
+        'SQL Injection Lab – úloha na obídenie prihlásenia s ukážkou napadnutého SQL dotazu a rady na obranu',
       screenshots: [
+        {
+          src: '/images/sqlinjectionlab.png',
+          alt: "Úloha 3 v SQL Injection Lab: prihlásenie ako admin pomocou vstupu admin' OR '1'='1' --",
+        },
         {
           src: '/images/sqlinjection.png',
           alt: 'Cvičná úroveň v prostredí SQL Injection Lab',
@@ -815,6 +832,7 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
     },
     {
       slug: 'mirka-a-david',
+      category: 'community',
       title: 'Mirka a Dávid',
       type: 'Web',
       description:
@@ -844,36 +862,8 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
       ],
     },
     {
-      slug: 'toxipred-team',
-      title: 'Toxipred – tímová stránka',
-      type: 'Web',
-      description:
-        'Tímová stránka do súťaže TP CUP na FIIT STU. Cieľom projektu bolo vytvoriť predikčný model na odhaľovanie genotoxicity látok pomocou strojového učenia.',
-      longDescription:
-        'Toxipred – tímová stránka bola reprezentatívnou stránkou nášho tímu v súťaži TP CUP na FIIT STU. Predstavuje členov tímu, cieľ projektu a jeho priebeh.\n\nCieľom projektu bolo vytvoriť predikčný model na odhaľovanie genotoxicity látok pomocou strojového učenia. Stránka slúžila na prezentáciu tímu a informovanie o postupe práce počas súťaže.',
-      features: [
-        'Predstavenie tímu a cieľov projektu',
-        'Prehľad postupu práce počas súťaže TP CUP',
-        'Reprezentatívny dizajn pre akademickú súťaž',
-        'Responzívne rozhranie',
-      ],
-      techStack: ['Vue.js', 'Quasar', 'TypeScript', 'SCSS'],
-      role: 'Člen tímu – webový vývoj',
-      year: '2023',
-      tags: ['Školský projekt', 'Reprezentatívna stránka tímu', 'Umelá inteligencia'],
-      projectUrl: 'https://toxipred.kromka.it',
-      githubUrl: 'https://github.com/xkromkad/Toxipred',
-      image: '/images/toxipred_team.png',
-      imageAlt: 'Screenshot tímovej stránky Toxipred pre súťaž TP CUP na FIIT STU v Bratislave',
-      screenshots: [
-        {
-          src: '/images/toxipred_team.png',
-          alt: 'Tímová stránka projektu Toxipred pre súťaž TP CUP',
-        },
-      ],
-    },
-    {
       slug: 'toxipred-prediction',
+      category: 'science',
       title: 'Toxipred – predikcia genotoxicity',
       type: 'Web',
       description:
@@ -901,10 +891,41 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
         },
       ],
     },
+    {
+      slug: 'toxipred-team',
+      category: 'science',
+      title: 'Toxipred – tímová stránka',
+      type: 'Web',
+      description:
+        'Tímová stránka do súťaže TP CUP na FIIT STU. Cieľom projektu bolo vytvoriť predikčný model na odhaľovanie genotoxicity látok pomocou strojového učenia.',
+      longDescription:
+        'Toxipred – tímová stránka bola reprezentatívnou stránkou nášho tímu v súťaži TP CUP na FIIT STU. Predstavuje členov tímu, cieľ projektu a jeho priebeh.\n\nCieľom projektu bolo vytvoriť predikčný model na odhaľovanie genotoxicity látok pomocou strojového učenia. Stránka slúžila na prezentáciu tímu a informovanie o postupe práce počas súťaže.',
+      features: [
+        'Predstavenie tímu a cieľov projektu',
+        'Prehľad postupu práce počas súťaže TP CUP',
+        'Reprezentatívny dizajn pre akademickú súťaž',
+        'Responzívne rozhranie',
+      ],
+      techStack: ['Vue.js', 'Quasar', 'TypeScript', 'SCSS'],
+      role: 'Člen tímu – webový vývoj',
+      year: '2023',
+      tags: ['Školský projekt', 'Reprezentatívna stránka tímu', 'Umelá inteligencia'],
+      projectUrl: 'https://toxipred.kromka.it',
+      githubUrl: 'https://github.com/xkromkad/Toxipred',
+      image: '/images/toxipred_team.png',
+      imageAlt: 'Screenshot tímovej stránky Toxipred pre súťaž TP CUP na FIIT STU v Bratislave',
+      screenshots: [
+        {
+          src: '/images/toxipred_team.png',
+          alt: 'Tímová stránka projektu Toxipred pre súťaž TP CUP',
+        },
+      ],
+    },
   ],
   en: [
     {
       slug: 'track-my-bunny',
+      category: 'community',
       title: 'Track My Bunny',
       type: 'Web',
       description:
@@ -935,6 +956,7 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
     {
       slug: 'predskolacik',
       category: 'education',
+      family: 'predskolacik',
       title: 'Predškoláčik',
       type: 'Web',
       description:
@@ -952,10 +974,13 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
       year: '2025',
       tags: ['Education', 'Artificial Intelligence', 'Learning Through Play'],
       projectUrl: 'https://predskolacik.app/',
-      image: '/images/predskolacik.jpg',
-      imageAlt:
-        'Screenshot of Predškoláčik – AI-powered interactive learning exercises for preschool children',
+      image: '/images/predskolacik-card.png',
+      imageAlt: 'Predškoláčik – an apple-counting exercise with Bali the bunny and reward stars',
       screenshots: [
+        {
+          src: '/images/predskolacik-card.png',
+          alt: 'The "How many apples do you see?" exercise in Predškoláčik with the correct answer 5',
+        },
         {
           src: '/images/predskolacik.jpg',
           alt: 'An interactive learning exercise in the Predškoláčik app',
@@ -965,6 +990,7 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
     {
       slug: 'pexesolab',
       category: 'education',
+      family: 'predskolacik',
       title: 'Pexesolab',
       type: 'Web',
       description:
@@ -994,6 +1020,7 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
     {
       slug: 'dominolab',
       category: 'education',
+      family: 'predskolacik',
       title: 'DominoLab',
       type: 'Web',
       description:
@@ -1024,6 +1051,7 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
     {
       slug: 'linklab',
       category: 'education',
+      family: 'predskolacik',
       title: 'LinkLab',
       type: 'Web',
       description:
@@ -1053,6 +1081,7 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
     },
     {
       slug: 'sql-injection-lab',
+      category: 'education',
       title: 'SQL Injection Lab',
       type: 'Web',
       description:
@@ -1071,10 +1100,14 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
       tags: ['SQL Injection', 'Information Security', 'Education'],
       projectUrl: 'https://sqlinjectionlab.kromka.it/',
       githubUrl: 'https://github.com/xkromkad/SQLInjectionLab',
-      image: '/images/sqlinjection.png',
+      image: '/images/sqlinjectionlab.png',
       imageAlt:
-        'Screenshot of SQL Injection Lab – safe practice environment for web security skills',
+        'SQL Injection Lab – a login-bypass task showing the injected SQL query and a defence tip',
       screenshots: [
+        {
+          src: '/images/sqlinjectionlab.png',
+          alt: "Task 3 in SQL Injection Lab: logging in as admin with the input admin' OR '1'='1' --",
+        },
         {
           src: '/images/sqlinjection.png',
           alt: 'A practice level in the SQL Injection Lab environment',
@@ -1083,6 +1116,7 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
     },
     {
       slug: 'mirka-a-david',
+      category: 'community',
       title: 'Mirka & David',
       type: 'Web',
       description:
@@ -1111,7 +1145,37 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
       ],
     },
     {
+      slug: 'toxipred-prediction',
+      category: 'science',
+      title: 'Toxipred – Genotoxicity Prediction',
+      type: 'Web',
+      description:
+        'Freely available tools for predicting phototoxicity and genotoxicity of chemical substances using machine learning. Developed as part of a research project at FIIT STU in collaboration with the research team.',
+      longDescription:
+        'Toxipred is a set of freely available tools for predicting the phototoxicity and genotoxicity of chemical substances using machine learning. It was created as part of a research project at FIIT STU in collaboration with the research team.\n\nThe tools let researchers quickly estimate the toxicological properties of substances without immediate laboratory testing, and are publicly available on the faculty domain.',
+      features: [
+        'Prediction of phototoxicity and genotoxicity of substances',
+        'Models built on machine learning',
+        'Freely available research tools',
+        'Result of collaboration with the FIIT STU research team',
+      ],
+      techStack: ['Python', 'Machine Learning', 'scikit-learn', 'Flask'],
+      role: 'Research team member',
+      year: '2023',
+      tags: ['University Project', 'Genotoxicity Prediction', 'Artificial Intelligence'],
+      projectUrl: 'https://mltox.fiit.stuba.sk',
+      image: '/images/toxipred.png',
+      imageAlt: 'Screenshot of Toxipred genotoxicity prediction tool powered by machine learning',
+      screenshots: [
+        {
+          src: '/images/toxipred.png',
+          alt: 'Toxipred genotoxicity prediction tool',
+        },
+      ],
+    },
+    {
       slug: 'toxipred-team',
+      category: 'science',
       title: 'Toxipred – Team Page',
       type: 'Web',
       description:
@@ -1140,34 +1204,6 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
         },
       ],
     },
-    {
-      slug: 'toxipred-prediction',
-      title: 'Toxipred – Genotoxicity Prediction',
-      type: 'Web',
-      description:
-        'Freely available tools for predicting phototoxicity and genotoxicity of chemical substances using machine learning. Developed as part of a research project at FIIT STU in collaboration with the research team.',
-      longDescription:
-        'Toxipred is a set of freely available tools for predicting the phototoxicity and genotoxicity of chemical substances using machine learning. It was created as part of a research project at FIIT STU in collaboration with the research team.\n\nThe tools let researchers quickly estimate the toxicological properties of substances without immediate laboratory testing, and are publicly available on the faculty domain.',
-      features: [
-        'Prediction of phototoxicity and genotoxicity of substances',
-        'Models built on machine learning',
-        'Freely available research tools',
-        'Result of collaboration with the FIIT STU research team',
-      ],
-      techStack: ['Python', 'Machine Learning', 'scikit-learn', 'Flask'],
-      role: 'Research team member',
-      year: '2023',
-      tags: ['University Project', 'Genotoxicity Prediction', 'Artificial Intelligence'],
-      projectUrl: 'https://mltox.fiit.stuba.sk',
-      image: '/images/toxipred.png',
-      imageAlt: 'Screenshot of Toxipred genotoxicity prediction tool powered by machine learning',
-      screenshots: [
-        {
-          src: '/images/toxipred.png',
-          alt: 'Toxipred genotoxicity prediction tool',
-        },
-      ],
-    },
   ],
 };
 
@@ -1176,43 +1212,109 @@ export interface ProjectCategoryInfo {
   description: string;
 }
 
-/** Display order of the categories; uncategorised projects follow them. */
-export const PROJECT_CATEGORY_ORDER: ProjectCategory[] = ['education'];
+/** Display order of the categories. */
+export const PROJECT_CATEGORY_ORDER: ProjectCategory[] = ['education', 'science', 'community'];
 
 export const projectCategories: Record<Locale, Record<ProjectCategory, ProjectCategoryInfo>> = {
   sk: {
     education: {
       title: 'Vzdelávanie',
       description:
-        'Nástroje pre deti v predškolskom veku, ich rodičov a učiteľky – učenie hrou, pracovné listy a hry na tlač aj online.',
+        'Aplikácie, pri ktorých sa učí hrou – od pracovných listov a hier pre predškolákov až po bezpečné laboratórium pre budúcich bezpečnostných expertov.',
+    },
+    science: {
+      title: 'Veda a výskum',
+      description:
+        'Výskumné projekty z FIIT STU – predikcia toxicity chemických látok pomocou strojového učenia.',
+    },
+    community: {
+      title: 'Osobné a komunitné projekty',
+      description:
+        'Weby a aplikácie pre ľudí okolo mňa – pre rodinu, priateľov a malé komunity.',
     },
   },
   en: {
     education: {
       title: 'Education',
       description:
-        'Tools for preschool children, their parents and teachers – learning through play, worksheets and games to print or play online.',
+        'Apps for learning through play – from worksheets and games for preschoolers to a safe lab for future security experts.',
+    },
+    science: {
+      title: 'Science & research',
+      description:
+        'Research projects from FIIT STU – predicting the toxicity of chemical substances with machine learning.',
+    },
+    community: {
+      title: 'Personal & community projects',
+      description:
+        'Websites and apps for the people around me – family, friends and small communities.',
     },
   },
 };
 
+export interface ProjectFamilyInfo {
+  title: string;
+  description: string;
+  url: string;
+  /** Slug of the main app, shown as the large card in the family panel. */
+  leadSlug: string;
+}
+
+export const projectFamilies: Record<Locale, Record<ProjectFamily, ProjectFamilyInfo>> = {
+  sk: {
+    predskolacik: {
+      title: 'Rodina Predškoláčik',
+      description:
+        'Rodina aplikácií pre predškolákov, ich rodičov a učiteľky – učenie hrou, pracovné listy a hry na tlač aj online.',
+      url: 'https://predskolacik.app/',
+      leadSlug: 'predskolacik',
+    },
+  },
+  en: {
+    predskolacik: {
+      title: 'The Predškoláčik family',
+      description:
+        'A family of apps for preschoolers, their parents and teachers – learning through play, worksheets and games to print or play online.',
+      url: 'https://predskolacik.app/',
+      leadSlug: 'predskolacik',
+    },
+  },
+};
+
+export interface ProjectFamilyGroup {
+  family: ProjectFamily;
+  info: ProjectFamilyInfo;
+  lead: PortfolioItem;
+  members: PortfolioItem[];
+}
+
 export interface ProjectGroup {
-  /** null for the trailing group of uncategorised projects. */
-  category: ProjectCategory | null;
-  info?: ProjectCategoryInfo;
+  category: ProjectCategory;
+  info: ProjectCategoryInfo;
+  families: ProjectFamilyGroup[];
+  /** Projects in this category that belong to no family. */
   items: PortfolioItem[];
 }
 
 /** Projects grouped by category in PROJECT_CATEGORY_ORDER, keeping data order within each group. */
 export function groupProjects(locale: Locale): ProjectGroup[] {
-  const items = portfolioData[locale];
-  const groups: ProjectGroup[] = PROJECT_CATEGORY_ORDER.map((category) => ({
-    category,
-    info: projectCategories[locale][category],
-    items: items.filter((p) => p.category === category),
-  })).filter((g) => g.items.length > 0);
-  const rest = items.filter((p) => !p.category);
-  return rest.length ? [...groups, { category: null, items: rest }] : groups;
+  const all = portfolioData[locale];
+  return PROJECT_CATEGORY_ORDER.map((category) => {
+    const inCategory = all.filter((p) => p.category === category);
+    const familyKeys = [...new Set(inCategory.flatMap((p) => (p.family ? [p.family] : [])))];
+    const families = familyKeys.map((family) => {
+      const info = projectFamilies[locale][family];
+      const projects = inCategory.filter((p) => p.family === family);
+      const lead = projects.find((p) => p.slug === info.leadSlug) ?? projects[0];
+      return { family, info, lead, members: projects.filter((p) => p !== lead) };
+    });
+    return {
+      category,
+      info: projectCategories[locale][category],
+      families,
+      items: inCategory.filter((p) => !p.family),
+    };
+  }).filter((g) => g.families.length > 0 || g.items.length > 0);
 }
 
 /** Locale-agnostic list of project slugs (Slovak array is the canonical source). */

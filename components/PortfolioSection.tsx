@@ -18,7 +18,7 @@ export default function PortfolioSection({ locale }: { locale: Locale }) {
       </div>
 
       {/* Cards, grouped by category */}
-      <ProjectGroups groups={groups} otherTitle={t('otherProjects')} headingLevel="h3" />
+      <ProjectGroups groups={groups} headingLevel="h3" />
     </div>
   );
 }

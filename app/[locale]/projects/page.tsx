@@ -4,7 +4,7 @@ import { Link } from '@/navigation';
 import type { Locale } from '@/lib/data';
 import { groupProjects } from '@/lib/data';
 import { SITE_URL, buildAlternates } from '@/lib/seo';
-import ProjectGroups from '@/components/ProjectGroups';
+import ProjectGroups, { projectCategoryId } from '@/components/ProjectGroups';
 
 export async function generateMetadata({
   params,
@@ -67,14 +67,25 @@ export default async function ProjectsIndexPage({
         ← {t('backHome')}
       </Link>
 
-      <header className="mb-12 max-w-2xl">
+      <header className="mx-auto mb-16 max-w-2xl text-center">
         <h1 className="text-4xl font-bold font-poppins mb-4 tracking-tight text-dark">
           {t('indexTitle')}
         </h1>
         <p className="text-gray-500 leading-relaxed">{t('indexSubtitle')}</p>
+        <nav aria-label={t('categoriesNav')} className="mt-8 flex flex-wrap justify-center gap-2">
+          {groups.map((group) => (
+            <a
+              key={group.category}
+              href={`#${projectCategoryId(group.category)}`}
+              className="rounded-full border border-gray-200 bg-white px-4 py-1.5 text-sm font-medium text-dark transition-colors hover:border-brand hover:bg-brand"
+            >
+              {group.info.title}
+            </a>
+          ))}
+        </nav>
       </header>
 
-      <ProjectGroups groups={groups} otherTitle={t('otherProjects')} headingLevel="h2" />
+      <ProjectGroups groups={groups} headingLevel="h2" />
     </div>
   );
 }

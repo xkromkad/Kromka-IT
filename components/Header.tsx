@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, type MouseEvent } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { Link, usePathname } from '@/navigation';
 import LanguageSwitcher from './LanguageSwitcher';
 
 const NAV_ITEMS = [
@@ -67,7 +68,9 @@ function NavIcon({ id }: { id: string }) {
 
 export default function Header() {
   const t = useTranslations('nav');
-  const [active, setActive] = useState('kromka');
+  const pathname = usePathname();
+  const isHome = pathname === '/';
+  const [active, setActive] = useState<string | null>(isHome ? 'kromka' : null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [isManualScroll, setIsManualScroll] = useState(false);
 
@@ -86,7 +89,19 @@ export default function Header() {
     setTimeout(() => setIsManualScroll(false), 800);
   }, []);
 
+  // Section links only scroll in place on the homepage; elsewhere they navigate to /#section.
+  const onNavClick = (e: MouseEvent, id: string) => {
+    setMenuOpen(false);
+    if (!isHome) return;
+    e.preventDefault();
+    scrollTo(id);
+  };
+
   useEffect(() => {
+    if (!isHome) {
+      setActive(null);
+      return;
+    }
     const handleScroll = () => {
       if (isManualScroll) return;
       const scrollY = window.scrollY;
@@ -107,17 +122,36 @@ export default function Header() {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [active, isManualScroll]);
+  }, [active, isManualScroll, isHome]);
 
+  // Scroll to the hash section on load and after navigating to the homepage from another page.
   useEffect(() => {
+    if (!isHome) return;
     const hash = window.location.hash.replace('#', '');
-    if (hash) setTimeout(() => scrollTo(hash), 150);
-  }, [scrollTo]);
+    if (!hash) {
+      setActive('kromka');
+      return;
+    }
+    const scrollTimer = setTimeout(() => scrollTo(hash), 150);
+    // Images above the section may still be loading and push it down; re-align once they settle.
+    const realignTimer = setTimeout(() => {
+      const el = document.getElementById(hash);
+      if (!el) return;
+      const top = el.getBoundingClientRect().top;
+      if (Math.abs(top - 80) > 8) {
+        window.scrollTo({ top: top + window.scrollY - 80, behavior: 'smooth' });
+      }
+    }, 1200);
+    return () => {
+      clearTimeout(scrollTimer);
+      clearTimeout(realignTimer);
+    };
+  }, [isHome, scrollTo]);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-dark shadow-lg" style={{ height: '4.5rem' }}>
       <div className="max-w-6xl mx-auto h-full flex items-center justify-between px-6">
-        <button onClick={() => scrollTo('kromka')} aria-label="Kromka IT – home">
+        <Link href="/#kromka" onClick={(e) => onNavClick(e, 'kromka')} aria-label="Kromka IT – home">
           <Image
             src="/icons/kromka.png"
             alt="Kromka IT"
@@ -126,21 +160,22 @@ export default function Header() {
             className="rounded-xl hover:opacity-90 transition-opacity"
             priority
           />
-        </button>
+        </Link>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-1">
           {NAV_ITEMS.map(({ id, key }) => (
-            <button
+            <Link
               key={id}
-              onClick={() => scrollTo(id)}
+              href={`/#${id}`}
+              onClick={(e) => onNavClick(e, id)}
               className={`flex items-center gap-1.5 px-3 py-2 text-xs tracking-wider uppercase transition-colors font-medium rounded-lg ${
                 active === id ? 'text-brand bg-white/5' : 'text-white/80 hover:text-brand hover:bg-white/5'
               }`}
             >
               <NavIcon id={id} />
               {t(key)}
-            </button>
+            </Link>
           ))}
           <div className="ml-2">
             <LanguageSwitcher />
@@ -168,16 +203,17 @@ export default function Header() {
       {menuOpen && (
         <nav className="md:hidden bg-dark border-t border-white/10 px-6 py-4 flex flex-col gap-1">
           {NAV_ITEMS.map(({ id, key }) => (
-            <button
+            <Link
               key={id}
-              onClick={() => scrollTo(id)}
+              href={`/#${id}`}
+              onClick={(e) => onNavClick(e, id)}
               className={`flex items-center gap-2 py-3 text-sm tracking-wider uppercase font-medium transition-colors ${
                 active === id ? 'text-brand' : 'text-white hover:text-brand'
               }`}
             >
               <NavIcon id={id} />
               {t(key)}
-            </button>
+            </Link>
           ))}
           <div className="pt-2">
             <LanguageSwitcher />
