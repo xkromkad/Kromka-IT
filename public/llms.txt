@@ -30,6 +30,7 @@
 - [Pexesolab](https://pexeso.predskolacik.app/) — AI-powered memory card game generator from custom images.
 - [DominoLab](https://domino.predskolacik.app/) — Printable domino generator (dots, numbers, colours, shapes, own pictures) and an in-browser domino game.
 - [LinkLab](https://link.predskolacik.app/) — Printable matching and sorting worksheets for preschoolers, with an 800+ picture library searchable in Slovak and English, and an online game.
+- [MatchLab](https://match.predskolacik.app/) — Printable spot-the-match card game generator (Dobble-style) from your own photos, emoji, shapes or letters, with AI background removal and an online game.
 - [SQL Injection Lab](https://sqlinjectionlab.kromka.it/) — Safe and legal SQL Injection practice environment for students and security professionals.
 - [Mirka & David](https://mirkaadavid.kromka.it/) — Custom wedding website with guest info, schedule, and photo sharing.
 - [Toxipred](https://mltox.fiit.stuba.sk) — Machine learning tools for genotoxicity and phototoxicity prediction (research project, FIIT STU).

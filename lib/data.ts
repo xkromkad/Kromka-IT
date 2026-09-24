@@ -691,7 +691,8 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
       tags: ['Vzdelávanie', 'Umelá inteligencia', 'Učenie hrou'],
       projectUrl: 'https://predskolacik.app/',
       image: '/images/predskolacik-card.png',
-      imageAlt: 'Predškoláčik – úloha na počítanie jabĺk so zajačikom Bali a hviezdičkami za odmenu',
+      imageAlt:
+        'Predškoláčik – úloha na počítanie jabĺk so zajačikom Bali a hviezdičkami za odmenu',
       screenshots: [
         {
           src: '/images/predskolacik-card.png',
@@ -792,6 +793,46 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
         {
           src: '/images/linklab.png',
           alt: 'Pracovný list „Povolania a ich veci“ vytvorený v aplikácii LinkLab',
+        },
+      ],
+    },
+    {
+      slug: 'matchlab',
+      category: 'education',
+      family: 'predskolacik',
+      title: 'MatchLab',
+      type: 'Web',
+      description:
+        'Generátor kariet do hry na hľadanie zhody v štýle Dobble. Každé dve karty majú práve jeden spoločný obrázok – z vlastných fotiek, emoji, tvarov či písmen, s PDF na tlač aj hrou online.',
+      longDescription:
+        'MatchLab vytvorí kartovú hru, v ktorej majú každé dve karty práve jeden spoločný obrázok – rovnaký princíp, aký poznáte z hier Dobble či Spot It! Karty vzniknú z vašich fotiek, detských kresieb, emoji, farebných tvarov alebo písmen, ktoré sa dieťa práve učí.\n\nMatematiku za hrou (rozdelenie symbolov podľa projektívnej roviny) vyrieši aplikácia za vás, takže si stačí vybrať veľkosť balíčka od 7 kariet pre najmenších po 91 kariet pre expertov. Pozadie fotiek odstráni umelá inteligencia priamo v prehliadači, takže obrázky nikam neodchádzajú. Hotový balíček sa stiahne ako PDF alebo SVG na tlač, prípadne sa dá zahrať priamo v prehliadači.',
+      features: [
+        'Karty z vlastných fotiek, emoji, tvarov, písmen aj slov',
+        'Osem veľkostí balíčka – od 7 kariet pre batoľatá po 91 pre expertov',
+        'Odstránenie pozadia umelou inteligenciou priamo v prehliadači',
+        'PDF a SVG na tlač, okrúhle aj štvorcové karty s voliteľným rubom',
+        'Hra online proti počítaču, na čas alebo vo dvojici',
+      ],
+      techStack: [
+        'Next.js',
+        'React',
+        'TypeScript',
+        'Umelá inteligencia',
+        'jsPDF',
+        'SVG',
+        'Tailwind CSS',
+      ],
+      role: 'Samostatný vývojár',
+      year: '2026',
+      tags: ['Vzdelávanie', 'Učenie hrou', 'PDF na tlač'],
+      projectUrl: 'https://match.predskolacik.app/',
+      image: '/images/matchlab.png',
+      imageAlt:
+        'MatchLab – dve okrúhle karty hry Zhoda!, na ktorých je zvýraznený jediný spoločný obrázok',
+      screenshots: [
+        {
+          src: '/images/matchlab.png',
+          alt: 'Karty hry Zhoda! vytvorené v aplikácii MatchLab so zvýrazneným spoločným obrázkom',
         },
       ],
     },
@@ -1080,6 +1121,37 @@ export const portfolioData: Record<Locale, PortfolioItem[]> = {
       ],
     },
     {
+      slug: 'matchlab',
+      category: 'education',
+      family: 'predskolacik',
+      title: 'MatchLab',
+      type: 'Web',
+      description:
+        'A generator for spot-the-match card games in the style of Dobble. Any two cards share exactly one picture – built from your own photos, emoji, shapes or letters, with a printable PDF and an online game.',
+      longDescription:
+        'MatchLab builds a card game in which any two cards share exactly one picture – the same idea you know from Dobble or Spot It! The cards are made from your own photos, children’s drawings, emoji, coloured shapes or the letters a child is currently learning.\n\nThe app works out the maths behind the game (arranging the symbols along a projective plane), so you only pick the deck size – from 7 cards for the youngest to 91 for experts. Photo backgrounds are removed by AI right in the browser, so the pictures never leave your device. The finished deck downloads as a printable PDF or SVG, or can be played straight in the browser.',
+      features: [
+        'Cards from your own photos, emoji, shapes, letters or words',
+        'Eight deck sizes – from 7 cards for toddlers to 91 for experts',
+        'AI background removal running entirely in the browser',
+        'Printable PDF and SVG, round or square cards with optional backs',
+        'Online game against the computer, against the clock or with a friend',
+      ],
+      techStack: ['Next.js', 'React', 'TypeScript', 'AI', 'jsPDF', 'SVG', 'Tailwind CSS'],
+      role: 'Solo developer',
+      year: '2026',
+      tags: ['Education', 'Learning Through Play', 'Printable PDF'],
+      projectUrl: 'https://match.predskolacik.app/',
+      image: '/images/matchlab.png',
+      imageAlt: 'MatchLab – two round Match! cards with the single picture they share highlighted',
+      screenshots: [
+        {
+          src: '/images/matchlab.png',
+          alt: 'Match! cards created in MatchLab with the shared picture highlighted',
+        },
+      ],
+    },
+    {
       slug: 'sql-injection-lab',
       category: 'education',
       title: 'SQL Injection Lab',
@@ -1229,8 +1301,7 @@ export const projectCategories: Record<Locale, Record<ProjectCategory, ProjectCa
     },
     community: {
       title: 'Osobné a komunitné projekty',
-      description:
-        'Weby a aplikácie pre ľudí okolo mňa – pre rodinu, priateľov a malé komunity.',
+      description: 'Weby a aplikácie pre ľudí okolo mňa – pre rodinu, priateľov a malé komunity.',
     },
   },
   en: {
